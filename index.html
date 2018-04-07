@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <script language="javascript">
+            $(document).ready(
+                function()
+                {
+                    $('#SQLInstance').css("display","none");
+                    $('#SQLLogins'  ).css("display","none");
+                    $('#DiskSpace'  ).css("display","none");
+                    $('#vSphere'    ).css("display","none");
+                    $('#Services'   ).css("display","none");
+                    $('#LocalAdmins').css("display","none");
+                    $('#Tivoli'     ).css("display","none");
+                }
+            );
+        </script>
+        
+        <script language="javascript">
+            function itemClick(id) 
+            {
+                var x = document.getElementById(id);
+
+                if(id === "CMDB")
+                {
+                    if(x.style.display === "none")
+                    {
+                        $('#SQLInstance').css("display","none");
+                        $('#SQLLogins'  ).css("display","none");
+                        $('#DiskSpace'  ).css("display","none");
+                        $('#vSphere'    ).css("display","none");
+                        $('#Services'   ).css("display","none");
+                        $('#LocalAdmins').css("display","none");
+                        $('#Tivoli'     ).css("display","none");
+                        x.style.display = "block";
+                    }
+                }
+
+                if(id === "SQLInstance")
+                {
+                    if(x.style.display === "none")
+                    {
+                        $('#CMDB'       ).css("display","none");
+                        $('#SQLLogins'  ).css("display","none");
+                        $('#DiskSpace'  ).css("display","none");
+                        $('#vSphere'    ).css("display","none");
+                        $('#Services'   ).css("display","none");
+                        $('#LocalAdmins').css("display","none");
+                        $('#Tivoli'     ).css("display","none");
+                        x.style.display = "block"; 
+                    }
+                }
+                
+                if(id === "SQLLogins")
+                {
+                    if(x.style.display === "none")
+                    {
+                        $('#CMDB'       ).css("display","none");
+                        $('#SQLInstance').css("display","none");
+                        $('#DiskSpace'  ).css("display","none");
+                        $('#vSphere'    ).css("display","none");
+                        $('#Services'   ).css("display","none");
+                        $('#LocalAdmins').css("display","none");
+                        $('#Tivoli'     ).css("display","none");
+                        x.style.display = "block"; 
+                    }
+                }
+                
+                if(id === "DiskSpace")
+                {
+                    if(x.style.display === "none")
+                    {
+                        $('#CMDB'       ).css("display","none");
+                        $('#SQLLogins'  ).css("display","none");
+                        $('#SQLInstance').css("display","none");
+                        $('#vSphere'    ).css("display","none");
+                        $('#Services'   ).css("display","none");
+                        $('#LocalAdmins').css("display","none");
+                        $('#Tivoli'     ).css("display","none");
+                        x.style.display = "block"; 
+                    }
+                }
+                
+                if(id === "vSphere")
+                {
+                    if(x.style.display === "none")
+                    {
+                        $('#CMDB'       ).css("display","none");
+                        $('#SQLLogins'  ).css("display","none");
+                        $('#DiskSpace'  ).css("display","none");
+                        $('#SQLInstance').css("display","none");
+                        $('#Services'   ).css("display","none");
+                        $('#LocalAdmins').css("display","none");
+                        $('#Tivoli'     ).css("display","none");
+                        x.style.display = "block"; 
+                    }
+                }
+                
+                if(id === "Services")
+                {
+                    if(x.style.display === "none")
+                    {
+                        $('#CMDB'       ).css("display","none");
+                        $('#SQLLogins'  ).css("display","none");
+                        $('#DiskSpace'  ).css("display","none");
+                        $('#vSphere'    ).css("display","none");
+                        $('#SQLInstance').css("display","none");
+                        $('#LocalAdmins').css("display","none");
+                        $('#Tivoli'     ).css("display","none");
+                        x.style.display = "block"; 
+                    }
+                }
+                
+                if(id === "LocalAdmins")
+                {
+                    if(x.style.display === "none")
+                    {
+                        $('#CMDB'       ).css("display","none");
+                        $('#SQLLogins'  ).css("display","none");
+                        $('#DiskSpace'  ).css("display","none");
+                        $('#vSphere'    ).css("display","none");
+                        $('#Services'   ).css("display","none");
+                        $('#SQLInstance').css("display","none");
+                        $('#Tivoli'     ).css("display","none");
+                        x.style.display = "block"; 
+                    }
+                }
+                
+                if(id === "Tivoli")
+                {
+                    if(x.style.display === "none")
+                    {
+                        $('#CMDB'       ).css("display","none");
+                        $('#SQLLogins'  ).css("display","none");
+                        $('#DiskSpace'  ).css("display","none");
+                        $('#vSphere'    ).css("display","none");
+                        $('#Services'   ).css("display","none");
+                        $('#SQLInstance').css("display","none");
+                        $('#LocalAdmins').css("display","none");
+                        x.style.display = "block"; 
+                    }
+                }
+            }
+        </script>
+        
+    </head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+    
+    <style>
+        body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+        .w3-row-padding img {margin-bottom: 12px}
+        
+        /* Set the width of the sidebar to 120px */
+        .w3-sidebar {width: 120px;background: #222;}
+        
+        /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+        #main {margin-left: 120px}
+        
+        /* Remove margins from "page content" on small screens */
+        @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+
+        /*
+            th {background-color: chartreuse;}
+            td {background-color: darkturquoise;}
+        */
+        td,th {text-align: left; padding: 8px;}
+        table {border-collapse: collapse; border-spacing: 0; width: 100%; border: 0px solid gray;}
+        
+        .appmapping-tbl tr:nth-child(even){background-color: #f2f2f2;}
+        .appmapping-tbl tr:nth-child(odd){background-color: white;}
+        
+        .cmdb-tbl tr:nth-child(even){background-color: #f2f2f2;}
+        .cmdb-tbl tr:nth-child(odd){background-color: white;}
+        
+        .appmapping-tbl th, .cmdb-tbl th, #snowdesc-tbl th {background-color: deepskyblue;}
+        #snowdesc-tbl td {background-color: white;}
+        .panel-body{background-color: gray;}
+        
+        .td-nopadding{padding: 0px;}
+        
+        .panel-default{border-color: black;}
+        
+        #panel-heading-snow       {background-color: #0cff2a;}
+        #panel-heading-prometheus {background-color: red;}
+        #panel-heading-gel        {background-color: #0cff2a;}
+        
+        .panel-default>.panel-heading+.panel-collapse>.panel-body{border-top-color: gray;}
+        
+        .SQLInstanceName {background-color: deepskyblue; color: black;}
+        .SQLInstances-tbl th {background-color: deepskyblue; color: black;}
+    </style>
+    
+    
+    
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="RBS.png" width="40%" style="margin: 5px;">
+    
+  <a href="#" onclick="itemClick('CMDB')" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-sitemap w3-xxlarge"></i>
+    <p>CMDB</p>
+  </a>
+    
+  <a href="#" onclick="itemClick('SQLInstance')" href class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-database w3-xxlarge"></i>
+    <p>SQL Instance</p>
+  </a>
+    
+  <a href="#" onclick="itemClick('SQLLogins')" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-key w3-xxlarge"></i>
+    <p>SQL Logins</p>
+  </a>
+      
+  <a href="#" onclick="itemClick('DiskSpace')" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fas fa-hdd fa-3x"></i>
+    <p>DISK SPACE</p>
+  </a>
+    
+  <a href="#" onclick="itemClick('vSphere')" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-server fa-3x"></i>
+    <p>vSphere</p>
+  </a>
+    
+  <a href="#" onclick="itemClick('Services')" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>SERVICES</p>
+    </a>
+      
+  <a href="#" onclick="itemClick('LocalAdmins')" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>LOCAL ADMINS</p>
+  </a>
+    
+  <a href="#" onclick="itemClick('Tivoli')" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-heartbeat w3-xxlarge"></i>
+    <p>TIVOLI</p>
+  </a>
+    
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">LONMS09930</span></h1>
+  </header>
+
+    
+
+  <!-- CMDB Page -->
+  <div id="CMDB" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
+    <div class="w3-container w3-padding-32 w3-center w3-black">
+        
+    <!-- Accordion Start -->
+      <div class="panel-group w5-content" id="accordion" style="color: black; font-display: block;">
+        <div class="panel panel-default">
+          <div class="panel-heading" id="panel-heading-snow">
+            <h4 class="panel-title">
+               <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Service Now</a>
+            </h4>
+           </div>
+        
+          <!-- ServiceNow Collapse -->
+          <div id="collapse1" class="panel-collapse collapse in">
+            <div  class="panel-body">
+                <!-- Top SNOW CMDB Tbl -->
+                <table align="center" width="100%" style="overflow-x: auto">
+                    <tr id="tr-noborder">
+                        <td class="td-nopadding">
+                            <table border="1" width="95%" class="cmdb-tbl">
+                                <col width="30%">
+                                <col width="70%">
+                                <tr>
+                                    <th>ServerName</th>
+                                    <td>GBEDXCOUDB01</td>
+                                </tr>
+                                <tr>
+                                    <th>Owning Team Infra</th>
+                                    <td>MSSQL DBA Team</td>
+                                </tr>
+                                <tr>
+                                    <th>Environment</th>
+                                    <td>Production</td>
+                                </tr>
+                                <tr>
+                                    <th>Class</th>
+                                    <td>Windows</td>
+                                </tr>
+                                <tr>
+                                    <th>Active</th>
+                                    <td>True</td>
+                                </tr>
+                                <tr>
+                                    <th>Status</th>
+                                    <td>In Service</td>
+                                </tr>
+                            </table>  
+                        </td>
+                        <td class="td-nopadding">
+                            <table border="1" width="95%" class="cmdb-tbl">
+                                <col width="30%">
+                                <col width="70%">
+                                <tr>
+                                    <th>IP Address</th>
+                                    <td>10.189.3.42</td>
+                                </tr>
+                                <tr>
+                                    <th>Operating System</th>
+                                    <td>16</td>
+                                </tr>
+                                <tr>
+                                    <th>Model</th>
+                                    <td>32 GB</td>
+                                </tr>
+                                <tr>
+                                    <th>CPU</th>
+                                    <td>Windows Server 2012 R2</td>
+                                </tr>
+                                <tr>
+                                    <th>Location</th>
+                                    <td>True</td>
+                                </tr>
+                                <tr>
+                                    <th>SOx</th>
+                                    <td>False</td>
+                                </tr>
+                            </table> 
+                        </td>
+                    </tr>
+                </table>
+                <br/>
+                <!-- SNOW Desc -->
+                <table align="center" width="100%" border="1" id="snowdesc-tbl">
+                    <tr>
+                        <th>Description</th>
+                        <td>Initial Data Load: uCMDB/GEL (uCMDB Actual) GEL:ASSET NO. OF LONPS2321 BEFORE VIRTUALISATION</td>
+                    </tr>
+                </table>
+                <br/>
+                <!-- SNOW AppMapping -->
+                <table align="center" width="100%" border="1" class="appmapping-tbl">
+                    <tr>
+                        <th>Application</th>
+                        <th>Environment</th>
+                        <th>Team</th>
+                        <th>Team Email</th>
+                        <th>Manager</th>
+                        <th>Manager Email</th>
+                        <th>Tivoli Alert Group</th>
+                    </tr>
+                    <tr>
+                        <td>Protector (Global)</td>
+                        <td>Production</td>
+                        <td>Global CIB InfoSec Service Delivery</td>
+                        <td></td>
+                        <td>Steve Morgan</td>
+                        <td>Steve.Morgan@rbs.com</td>
+                        <td>CIB-Prod-InfoSec-ServiceDelivery</td>
+                    </tr>
+                    <tr>
+                        <td>MultiCash Classix (Instance)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>PointSec SmartCentre (LONDON)</td>
+                        <td>Production</td>
+                        <td>Global GIS Workplace Operations</td>
+                        <td></td>
+                        <td>Wayne Man</td>
+                        <td></td>
+                        <td>GLOBAL CORE DESKTOP - 3RD LINE</td>
+                    </tr>
+                    <tr>
+                        <td>PMGBVSQL01 (hosted on LONMS09930)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+          </div>
+          <!-- ServiceNow End -->
+            
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" id="panel-heading-prometheus">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Prometheus</a>
+            </h4>
+          </div>
+            
+          <!-- Prometheus DropDown -->
+        <div id="collapse2" class="panel-collapse collapse in">
+            <div  class="panel-body">
+                <!-- Top SNOW CMDB Tbl -->
+                <table align="center" width="100%" style="overflow-x: auto">
+                    <tr id="tr-noborder">
+                        <td class="td-nopadding">
+                            <table border="1" width="95%" class="cmdb-tbl">
+                                <col width="30%">
+                                <col width="70%">
+                                <tr>
+                                    <th>ServerName</th>
+                                    <td>GBMACCONDB01</td>
+                                </tr>
+                                <tr>
+                                    <th>Brand</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>Environment</th>
+                                    <td>LIVE</td>
+                                </tr>
+                                <tr>
+                                    <th>Network</th>
+                                    <td>HOLI</td>
+                                </tr>
+                                <tr>
+                                    <th>Operating System</th>
+                                    <td>Microsoft Windows Server 2003 Enterprise Edition</td>
+                                </tr>
+                                <tr>
+                                    <th>CPU</th>
+                                    <td>2 GHz</td>
+                                </tr>
+                                <tr>
+                                    <th>Memory</th>
+                                    <td>32 GB</td>
+                                </tr>
+                            </table>  
+                        </td>
+                        <td class="td-nopadding">
+                            <table border="1" width="95%" class="cmdb-tbl">
+                                <col width="30%">
+                                <col width="70%">
+                                <tr>
+                                    <th>Service</th>
+                                    <td>SQL Consolidated</td>
+                                </tr>
+                                <tr>
+                                    <th>Contact 1</th>
+                                    <td>Direct Mortgage Sales</td>
+                                </tr>
+                                <tr>
+                                    <th>Contact 2</th>
+                                    <td>ECMS-Amit Kumar Singh</td>
+                                </tr>
+                                <tr>
+                                    <th>Contact 3</th>
+                                    <td>Good Mobile Messaging - Kevin Dunn</td>
+                                </tr>
+                                <tr>
+                                    <th>Contact 4</th>
+                                    <td>VDI Verification Centre</td>
+                                </tr>
+                                <tr>
+                                    <th>Contact 5</th>
+                                    <td>Enterprise Manager - Lee White</td>
+                                </tr>
+                                <tr>
+                                    <th>SOx</th>
+                                    <td>NOT SOx Classified. (as per windows SOx working list)</td>
+                                </tr>
+                            </table> 
+                        </td>
+                    </tr>
+                </table>
+                <br/>
+                <table align="center" width="100%" border="1" id="snowdesc-tbl">
+                    <tr>
+                        <th>Description</th>
+                        <td>Initial Data Load: uCMDB/GEL (uCMDB Actual) GEL:ASSET NO. OF LONPS2321 BEFORE VIRTUALISATION</td>
+                    </tr>
+                </table>
+                <br/>
+                <table align="center" width="100%" style="overflow-x: auto">
+                    <tr id="tr-noborder">
+                        <td class="td-nopadding">
+                            <table border="1" class="cmdb-tbl">
+                                <col width="30%">
+                                <col width="70%">
+                                <tr>
+                                    <th>Location City</th>
+                                    <td>Edinburgh</td>
+                                </tr>
+                                <tr>
+                                    <th>Location Site</th>
+                                    <td>MacMerry</td>
+                                </tr>
+                                <tr>
+                                    <th>Location Room</th>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <th>Location U</th>
+                                    <td>09-10</td>
+                                </tr>
+                                <tr>
+                                    <th>Location CAB</th>
+                                    <td>E679</td>
+                                </tr>
+                            </table>  
+                        </td>
+                        <td class="td-nopadding">
+                            <table border="1" class="cmdb-tbl">
+                                <col width="30%">
+                                <col width="70%">
+                                <tr>
+                                    <th>Infrastructure Team</th>
+                                    <td>GCDS Windows Services Production</td>
+                                </tr>
+                                <tr>
+                                    <th>Infrastructure Team Queue</th>
+                                    <td>GCDS WINDOWS-GIS-GLOBAL</td>
+                                </tr>
+                                <tr>
+                                    <th>Infrastructure Email</th>
+                                    <td>~ AIS windows Services Operations</td>
+                                </tr>
+                                <tr>
+                                    <th>Infrastructure Telephone</th>
+                                    <td>+91 80 46635278</td>
+                                </tr>
+                            </table> 
+                        </td>
+                    </tr>
+                </table>
+            </div>
+          </div>
+          <!-- Prometheus End -->
+            
+            
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" id="panel-heading-gel">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">GEL</a>
+            </h4>
+          </div>
+            
+          <!-- GEL DropDown -->
+            <div id="collapse3" class="panel-collapse collapse in">
+            <div  class="panel-body">
+                <!-- Top GEL CMDB Tbl -->
+                <table align="center" width="100%" style="overflow-x: auto">
+                    <tr id="tr-noborder">
+                        <td class="td-nopadding">
+                            <table border="1" width="95%" class="cmdb-tbl">
+                                <col width="30%">
+                                <col width="70%">
+                                <tr>
+                                    <th>ServerName</th>
+                                    <td>LONMS09930</td>
+                                </tr>
+                                <tr>
+                                    <th>Location</th>
+                                    <td>ROM-VIRTUAL</td>
+                                </tr>
+                                <tr>
+                                    <th>SOx</th>
+                                    <td>NOT SOx Classified. (as per windows SOx working list)</td>
+                                </tr>
+                            </table>  
+                        </td>
+                        <td class="td-nopadding">
+                            <table border="1" width="95%" class="cmdb-tbl">
+                                <col width="30%">
+                                <col width="70%">
+                                <tr>
+                                    <th>Operating System</th>
+                                    <td>1Microsoft Windows Server 2008 R2 (64-Bit)</td>
+                                </tr>
+                                <tr>
+                                    <th>Model</th>
+                                    <td>HP VIRTUAL SERVER</td>
+                                </tr>
+                            </table> 
+                        </td>
+                    </tr>
+                </table>
+                <br/>
+                <!-- GEL AppMapping -->
+                <table align="center" width="100%" border="1" class="appmapping-tbl">
+                    <tr>
+                        <th>Application</th>
+                        <th>Environment</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Contact</th>
+                        <th>Email</th>
+                        <th>Telephone</th>
+                        <th>Application Manager</th>
+                        <th>OOH</th>
+                    </tr>
+                    <tr>
+                        <td>Infrastructure - Pointsec SmartCentre</td>
+                        <td>Production</td>
+                        <td>MSSQL</td>
+                        <td>Production Database LONMS09930\PMGBVSQL01</td>
+                        <td></td>
+                        <td>gcd@rbs.com</td>
+                        <td>+44 20 3361 4150</td>
+                        <td></td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <td>Protector (Global)</td>
+                        <td>Production</td>
+                        <td>MSSQL</td>
+                        <td>Production Protector SQL DB</td>
+                        <td>Richard Birks; Arunkumar Devaraj</td>
+                        <td>NWMSecurityServicesSupport@rbsres07.net</td>
+                        <td>+44 207 085 3919</td>
+                        <td></td>
+                        <td>False</td>
+                    </tr>
+                </table>
+            </div>
+          </div>
+          <!-- GEL END -->
+            
+            
+        </div>
+      </div> 
+    <!-- Accordion End -->
+
+    </div>  
+  </div>
+  
+  <div id="SQLInstance" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
+    <div class="w3-container w3-padding-32 w3-center w3-black">
+        <h1>SQL Instances</h1>
+        
+        <table class="SQLInstances-tbl" border="1">
+            <tr><td class="SQLInstanceName">LONMS09930\PMGBVSQL01</td></tr>
+            <tr>
+                <th>Database</th>
+                <th>Data File</th>
+                <th>Log File</th>
+                <th>Data Used</th>
+                <th>Recovery Model</th>
+                <th>Last Backup</th>
+            </tr>
+            <tr>
+                <td>master</td>
+                <td>400</td>
+                <td>50</td>
+                <td>224</td>
+                <td>SIMPLE</td>
+                <td>31/03/2018 22:30</td>
+            </tr>
+            <tr>
+                <td>msdb</td>
+                <td>1000</td>
+                <td>250</td>
+                <td>10</td>
+                <td>SIMPLE</td>
+                <td>31/03/2018 22:30</td>
+            </tr>
+            <tr>
+                <td>model</td>
+                <td>650</td>
+                <td>100</td>
+                <td>445</td>
+                <td>SIMPLE</td>
+                <td>31/03/2018 22:30</td>
+            </tr>
+            <tr>
+                <td>WSS_Content_01</td>
+                <td>2500</td>
+                <td>750</td>
+                <td>1364</td>
+                <td>BULK LOGGED</td>
+                <td>31/03/2018 22:30</td>
+            </tr>
+            <tr>
+                <td>WSS_Content_02</td>
+                <td>1210</td>
+                <td>200</td>
+                <td>453</td>
+                <td>BULK LOGGED</td>
+                <td>31/03/2018 22:30</td>
+            </tr>
+            <tr>
+                <td>WSS_Content_03</td>
+                <td>455</td>
+                <td>100</td>
+                <td>200</td>
+                <td>BULK LOGGED</td>
+                <td>31/03/2018 22:30</td>
+            </tr>
+            <tr>
+                <td>WSS_Content_04</td>
+                <td>5000</td>
+                <td>1250</td>
+                <td>3463</td>
+                <td>BULK LOGGED</td>
+                <td>31/03/2018 22:30</td>
+            </tr>
+            <tr>
+                <td>WSS_Content_05</td>
+                <td>2420</td>
+                <td>1000</td>
+                <td>1543</td>
+                <td>BULK LOGGED</td>
+                <td>31/03/2018 22:30</td>
+            </tr>
+            <tr>
+                <td>WSS_Content_06</td>
+                <td>3420</td>
+                <td>1000</td>
+                <td>1364</td>
+                <td>BULK LOGGED</td>
+                <td>31/03/2018 22:30</td>
+            </tr>
+        </table>
+    </div>  
+  </div>
+  
+  <div id="SQLLogins" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
+    <div class="w3-container w3-padding-32 w3-center w3-black">
+        <h1>SQL Logins</h1>
+    </div>  
+  </div>
+  
+  <div id="DiskSpace" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
+    <div class="w3-container w3-padding-32 w3-center w3-black">
+        <h1>Disk Space</h1>
+    </div>  
+  </div>
+
+  <div id="vSphere" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
+    <div class="w3-container w3-padding-32 w3-center w3-black">
+        <h1>vSphere</h1>
+    </div>  
+  </div>
+
+  <div id="Services" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
+    <div class="w3-container w3-padding-32 w3-center w3-black">
+        <h1>Services</h1>
+    </div>  
+  </div>
+   
+  <div id="LocalAdmins" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
+    <div class="w3-container w3-padding-32 w3-center w3-black">
+        <h1>Local Admins</h1>
+    </div>  
+  </div>
+
+  <div id="Tivoli" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
+    <div class="w3-container w3-padding-32 w3-center w3-black">
+        <h1>Tivoli</h1>
+    </div>  
+  </div>
+
+    
+<!-- END PAGE CONTENT -->
+</div>
+    
+</body>
+</html>
