@@ -38,6 +38,8 @@
                         $('#Tivoli'     ).css("display","none");
                         x.style.display = "block";
                     }
+                    
+                    $('#CMDB').css("background-color","blue");
                 }
 
                 if(id === "SQLInstance")
@@ -176,6 +178,7 @@
         td,th {text-align: left; padding: 8px;}
         table {border-collapse: collapse; border-spacing: 0; width: 100%; border: 0px solid gray;}
         
+        /* Format Application Mapping Table Rows */
         .appmapping-tbl tr:nth-child(even){background-color: #f2f2f2;}
         .appmapping-tbl tr:nth-child(odd){background-color: white;}
         
@@ -198,14 +201,16 @@
         
         .SQLInstanceName {background-color: deepskyblue; color: black;}
         .SQLInstances-tbl th {background-color: deepskyblue; color: black;}
+                
+        #myNavbar         {border-bottom: 1px; border-bottom-color: white; border-bottom-style: solid;}
+        #myNavbar a       {text-decoration: none}
         
-        #myNavbar {border-bottom: 1px; border-bottom-color: white; border-bottom-style: solid;}
         #ServerName {margin-top: 1em;}
     </style>
 
     <body class="w3-black">
         <!-- Icon Bar (Sidebar - hidden on small screens) -->
-        <nav class="w3-top w3-opacity w3-hover-opacity-off w3-center" id="myNavbar">
+        <nav class="w3-top w3-center" id="myNavbar">
           <!-- Avatar image in top left corner -->
           <img src="RBS.png" width="40%" style="margin: 5px;">
 
@@ -213,31 +218,31 @@
             CMDB
           </a>
 
-          <a href="#" onclick="itemClick('SQLInstance')" href class="w3-bar-item w3-button w3-black">
+          <a href="#" onclick="itemClick('SQLInstance')" href class="w3-bar-item w3-padding-large w3-button w3-black">
             SQL Instance
           </a>
 
-          <a href="#" onclick="itemClick('SQLLogins')" class="w3-bar-item w3-button w3-black">
+          <a href="#" onclick="itemClick('SQLLogins')" class="w3-bar-item w3-padding-large w3-button w3-black">
             SQL Logins
           </a>
 
-          <a href="#" onclick="itemClick('DiskSpace')" class="w3-bar-item w3-button w3-black">
+          <a href="#" onclick="itemClick('DiskSpace')" class="w3-bar-item w3-padding-large w3-button w3-black">
             Disk Space
           </a>
 
-          <a href="#" onclick="itemClick('vSphere')" class="w3-bar-item w3-button w3-black">
+          <a href="#" onclick="itemClick('vSphere')" class="w3-bar-item w3-padding-large w3-button w3-black">
             vSphere
           </a>
 
-          <a href="#" onclick="itemClick('Services')" class="w3-bar-item w3-button w3-black">
+          <a href="#" onclick="itemClick('Services')" class="w3-bar-item w3-padding-large w3-button w3-black">
             Services
           </a>
 
-          <a href="#" onclick="itemClick('LocalAdmins')" class="w3-bar-item w3-button w3-black">
+          <a href="#" onclick="itemClick('LocalAdmins')" class="w3-bar-item w3-padding-large w3-button w3-black">
             Local Admins
           </a>
 
-          <a href="#" onclick="itemClick('Tivoli')" class="w3-bar-item w3-button w3-black">
+          <a href="#" onclick="itemClick('Tivoli')" class="w3-bar-item w3-padding-large w3-button w3-black">
             Tivoli
           </a>
 
