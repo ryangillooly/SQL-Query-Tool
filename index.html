@@ -38,6 +38,15 @@
                         $('#Tivoli'     ).css("display","none");
                         x.style.display = "block";
                     }
+                    
+                    $('#SQLInstance_btn').css("background-color","#000"); 
+                    $('#SQLLogins_btn'  ).css("background-color","#000");
+                    $('#DiskSpace_btn'  ).css("background-color","#000");
+                    $('#vSphere_btn'    ).css("background-color","#000");
+                    $('#Services_btn'   ).css("background-color","#000");
+                    $('#LocalAdmins_btn').css("background-color","#000");
+                    $('#Tivoli_btn'     ).css("background-color","#000");
+                    $('#CMDB_btn'       ).css("background-color","#2196F3");
                 }
 
                 if(id === "SQLInstance")
@@ -53,6 +62,15 @@
                         $('#Tivoli'     ).css("display","none");
                         x.style.display = "block"; 
                     }
+                    
+                    $('#CMDB_btn'       ).css("background-color","#000");
+                    $('#SQLLogins_btn'  ).css("background-color","#000");
+                    $('#DiskSpace_btn'  ).css("background-color","#000");
+                    $('#vSphere_btn'    ).css("background-color","#000");
+                    $('#Services_btn'   ).css("background-color","#000");
+                    $('#LocalAdmins_btn').css("background-color","#000");
+                    $('#Tivoli_btn'     ).css("background-color","#000");
+                    $('#SQLInstance_btn').css("background-color","#2196F3");
                 }
                 
                 if(id === "SQLLogins")
@@ -68,6 +86,15 @@
                         $('#Tivoli'     ).css("display","none");
                         x.style.display = "block"; 
                     }
+                    
+                    $('#CMDB_btn'       ).css("background-color","#000");
+                    $('#SQLInstance_btn').css("background-color","#000");
+                    $('#DiskSpace_btn'  ).css("background-color","#000");
+                    $('#vSphere_btn'    ).css("background-color","#000");
+                    $('#Services_btn'   ).css("background-color","#000");
+                    $('#LocalAdmins_btn').css("background-color","#000");
+                    $('#Tivoli_btn'     ).css("background-color","#000");
+                    $('#SQLLogins_btn'  ).css("background-color","#2196F3");
                 }
                 
                 if(id === "DiskSpace")
@@ -83,6 +110,15 @@
                         $('#Tivoli'     ).css("display","none");
                         x.style.display = "block"; 
                     }
+                    
+                    $('#CMDB_btn'       ).css("background-color","#000");
+                    $('#SQLInstance_btn').css("background-color","#000");
+                    $('#SQLLogins_btn'  ).css("background-color","#000");
+                    $('#vSphere_btn'    ).css("background-color","#000");
+                    $('#Services_btn'   ).css("background-color","#000");
+                    $('#LocalAdmins_btn').css("background-color","#000");
+                    $('#Tivoli_btn'     ).css("background-color","#000");
+                    $('#DiskSpace_btn'  ).css("background-color","#2196F3");
                 }
                 
                 if(id === "vSphere")
@@ -98,6 +134,15 @@
                         $('#Tivoli'     ).css("display","none");
                         x.style.display = "block"; 
                     }
+                    
+                    $('#CMDB_btn'       ).css("background-color","#000");
+                    $('#SQLInstance_btn').css("background-color","#000");
+                    $('#SQLLogins_btn'  ).css("background-color","#000");
+                    $('#DiskSpace_btn'  ).css("background-color","#000");
+                    $('#Services_btn'   ).css("background-color","#000");
+                    $('#LocalAdmins_btn').css("background-color","#000");
+                    $('#Tivoli_btn'     ).css("background-color","#000");
+                    $('#vSphere_btn'    ).css("background-color","#2196F3");
                 }
                 
                 if(id === "Services")
@@ -113,6 +158,15 @@
                         $('#Tivoli'     ).css("display","none");
                         x.style.display = "block"; 
                     }
+                    
+                    $('#CMDB_btn'       ).css("background-color","#000");
+                    $('#SQLInstance_btn').css("background-color","#000");
+                    $('#SQLLogins_btn'  ).css("background-color","#000");
+                    $('#DiskSpace_btn'  ).css("background-color","#000");
+                    $('#vSphere_btn'    ).css("background-color","#000");
+                    $('#LocalAdmins_btn').css("background-color","#000");
+                    $('#Tivoli_btn'     ).css("background-color","#000");
+                    $('#Services_btn'   ).css("background-color","#2196F3");
                 }
                 
                 if(id === "LocalAdmins")
@@ -128,6 +182,15 @@
                         $('#Tivoli'     ).css("display","none");
                         x.style.display = "block"; 
                     }
+                    
+                    $('#CMDB_btn'       ).css("background-color","#000");
+                    $('#SQLInstance_btn').css("background-color","#000");
+                    $('#SQLLogins_btn'  ).css("background-color","#000");
+                    $('#DiskSpace_btn'  ).css("background-color","#000");
+                    $('#vSphere_btn'    ).css("background-color","#000");
+                    $('#Services_btn'   ).css("background-color","#000");
+                    $('#Tivoli_btn'     ).css("background-color","#000");
+                    $('#LocalAdmins_btn').css("background-color","#2196F3");
                 }
                 
                 if(id === "Tivoli")
@@ -143,12 +206,33 @@
                         $('#LocalAdmins').css("display","none");
                         x.style.display = "block"; 
                     }
+                    
+                    $('#CMDB_btn'       ).css("background-color","#000");
+                    $('#SQLInstance_btn').css("background-color","#000");
+                    $('#SQLLogins_btn'  ).css("background-color","#000");
+                    $('#DiskSpace_btn'  ).css("background-color","#000");
+                    $('#vSphere_btn'    ).css("background-color","#000");
+                    $('#Services_btn'   ).css("background-color","#000");
+                    $('#LocalAdmins_btn').css("background-color","#000");
+                    $('#Tivoli_btn'     ).css("background-color","#2196F3");
                 }
             }
         </script>
-        
+        <script language="javascript">
+            function ArrowRotate(id) 
+            {
+                var x = document.getElementById(id);
+                
+                if(x.classList.contains('fa fa-angle-right'))  {x.classList.className = "fa fa-angle-down";}
+                else 
+                if(x.classList.contains('fa fa-angle-down')){x.classList.className = "fa fa-angle-right";}
+            }
+        </script>
+    
     </head>
-    <title>W3.CSS Template</title>
+    
+    <title>Host Hunter</title>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -156,15 +240,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <style>
+        html, body {font-size: 0.9em}
+        
         body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         .w3-row-padding img {margin-bottom: 12px}
+        .w3-top {position: relative}
         
         /* Set the width of the sidebar to 120px */
         .w3-sidebar {width: 120px;background: #222;}
-        
-        /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-        #main {margin-left: 120px}
-        
+                
         /* Remove margins from "page content" on small screens */
         @media only screen and (max-width: 600px) {#main {margin-left: 0}}
 
@@ -175,11 +259,21 @@
         td,th {text-align: left; padding: 8px;}
         table {border-collapse: collapse; border-spacing: 0; width: 100%; border: 0px solid gray;}
         
+        /* Format Application Mapping Table Rows */
         .appmapping-tbl tr:nth-child(even){background-color: #f2f2f2;}
         .appmapping-tbl tr:nth-child(odd){background-color: white;}
         
         .cmdb-tbl tr:nth-child(even){background-color: #f2f2f2;}
         .cmdb-tbl tr:nth-child(odd){background-color: white;}
+        
+        #SQLInstance tr:nth-child(even){background-color: #f2f2f2;}
+        #SQLInstance tr:nth-child(odd){background-color: white;}
+        #SQLInstance th {background-color: deepskyblue; color: black;}
+        
+        .Services-tbl tr:nth-child(even){background-color: #f2f2f2;}
+        .Services-tbl tr:nth-child(odd){background-color: white;}
+        .Services-tbl th {background-color: deepskyblue; color: black}
+        .Services-tbl tr {color: black}
         
         .appmapping-tbl th, .cmdb-tbl th, #snowdesc-tbl th {background-color: deepskyblue;}
         #snowdesc-tbl td {background-color: white;}
@@ -194,82 +288,104 @@
         #panel-heading-gel        {background-color: #0cff2a;}
         
         .panel-default>.panel-heading+.panel-collapse>.panel-body{border-top-color: gray;}
+
+        #myNavbar         {border-bottom: 1px; border-bottom-color: white; border-bottom-style: solid;}
+        #myNavbar a       {text-decoration: none}
         
-        .SQLInstanceName {background-color: deepskyblue; color: black;}
-        .SQLInstances-tbl th {background-color: deepskyblue; color: black;}
+        #ServerName {margin-top: 1em;}
+        
+        #CMDB_btn:hover        {color: #fff!important; background-color: #2196F3!important}
+        #SQLInstance_btn:hover {color: #fff!important; background-color: #2196F3!important}
+        #SQLLogins_btn:hover   {color: #fff!important; background-color: #2196F3!important}
+        #DiskSpace_btn:hover   {color: #fff!important; background-color: #2196F3!important}
+        #vSphere_btn:hover     {color: #fff!important; background-color: #2196F3!important}
+        #Services_btn:hover    {color: #fff!important; background-color: #2196F3!important}
+        #LocalAdmins_btn:hover {color: #fff!important; background-color: #2196F3!important}
+        #Tivoli_btn:hover      {color: #fff!important; background-color: #2196F3!important}
+        
+        #CMDB_btn        {color: #fff; background-color: #2196F3}
+        #SQLInstance_btn {color: #fff; background-color: #000}
+        #SQLLogins_btn   {color: #fff; background-color: #000}
+        #DiskSpace_btn   {color: #fff; background-color: #000}
+        #vSphere_btn     {color: #fff; background-color: #000}
+        #Services_btn    {color: #fff; background-color: #000}
+        #LocalAdmins_btn {color: #fff; background-color: #000}
+        #Tivoli_btn      {color: #fff; background-color: #000}
+        
+        .database_info p {font-size: 1.5em; text-align: left; margin-top: 2em;}
+        .instance_info p {font-size: 1.5em; text-align: left;}
+        .kb_info p       {font-size: 1.5em; text-align: left; margin-top: 19em;}
+        
+        .Instance_info_tbls td {width: 33%; vertical-align: top;}
+        
+        .SQLInstances-tbls {float: left; width: 33.33333%}
     </style>
-    
-<!--#####################################################################################################################-->
+
     <body class="w3-black">
         <!-- Icon Bar (Sidebar - hidden on small screens) -->
-        <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+        <nav class="w3-top w3-center w3-black" id="myNavbar">
           <!-- Avatar image in top left corner -->
-          <img src="RBS.png" width="40%" style="margin: 5px;">
-
-          <a href="#" onclick="itemClick('CMDB')" class="w3-bar-item w3-button w3-padding-large w3-black">
-            <i class="fa fa-sitemap w3-xxlarge"></i>
-            <p>CMDB</p>
+          <!--
+            <img src="RBS.png" width="40%" style="margin: 5px;">
+          -->
+          <a href="#" onclick="itemClick('CMDB')" class="w3-bar-item w3-button" id="CMDB_btn">
+            CMDB
           </a>
 
-          <a href="#" onclick="itemClick('SQLInstance')" href class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-            <i class="fa fa-database w3-xxlarge"></i>
-            <p>SQL Instance</p>
+          <a href="#" onclick="itemClick('SQLInstance')" href class="w3-bar-item w3-button" id="SQLInstance_btn">
+            SQL Instance
           </a>
 
-          <a href="#" onclick="itemClick('SQLLogins')" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-            <i class="fa fa-key w3-xxlarge"></i>
-            <p>SQL Logins</p>
+          <a href="#" onclick="itemClick('SQLLogins')" class="w3-bar-item w3-button" id="SQLLogins_btn">
+            SQL Logins
           </a>
 
-          <a href="#" onclick="itemClick('DiskSpace')" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-            <i class="fas fa-hdd fa-3x"></i>
-            <p>DISK SPACE</p>
+          <a href="#" onclick="itemClick('DiskSpace')" class="w3-bar-item w3-button" id="DiskSpace_btn">
+            Disk Space
           </a>
 
-          <a href="#" onclick="itemClick('vSphere')" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-            <i class="fa fa-server fa-3x"></i>
-            <p>vSphere</p>
+          <a href="#" onclick="itemClick('vSphere')" class="w3-bar-item w3-button" id="vSphere_btn">
+            vSphere
           </a>
 
-          <a href="#" onclick="itemClick('Services')" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-            <i class="fa fa-envelope w3-xxlarge"></i>
-            <p>SERVICES</p>
-            </a>
-
-          <a href="#" onclick="itemClick('LocalAdmins')" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-            <i class="fa fa-envelope w3-xxlarge"></i>
-            <p>LOCAL ADMINS</p>
+          <a href="#" onclick="itemClick('Services')" class="w3-bar-item w3-button" id="Services_btn">
+            Services
           </a>
 
-          <a href="#" onclick="itemClick('Tivoli')" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-            <i class="fa fa-heartbeat w3-xxlarge"></i>
-            <p>TIVOLI</p>
+          <a href="#" onclick="itemClick('LocalAdmins')" class="w3-bar-item w3-button" id="LocalAdmins_btn">
+            Local Admins
           </a>
+
+          <a href="#" onclick="itemClick('Tivoli')" class="w3-bar-item w3-button" id="Tivoli_btn">
+            Tivoli
+          </a>
+            
+          
 
         </nav>
 
         <!-- Navbar on small screens (Hidden on medium and large screens) -->
-        <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-          <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-            <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-            <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-            <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
-            <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
-          </div>
-        </div>
-
-        
-        <!--#############################################################################-->
+        <!--
+            <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+              <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+                <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+                <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+                <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+                <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+              </div>
+            </div>
+        -->
         <!-- Page Content -->
-        <div class="w3-padding-large" id="main">
+        <div id="main">
+          <!-- Header/Home -->
+          <header class="w3-container w3-center w3-black" id="home">
+            <h1 id="ServerName"><span class="w3-hide-small">LONMS09930</span></h1>
+          </header>
 
-            <!-- Header/Home -->
-            <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-            <h1 class="w3-jumbo"><span class="w3-hide-small">LONMS09930</span></h1>
-            </header>
 
-            <!-- CMDB Page -->
-            <div id="CMDB" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
+
+          <!-- CMDB Page -->
+          <div id="CMDB" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 95%;">
             <div class="w3-container w3-padding-32 w3-center w3-black">
 
             <!-- Accordion Start -->
@@ -277,7 +393,7 @@
                 <div class="panel panel-default">
                   <div class="panel-heading" id="panel-heading-snow">
                     <h4 class="panel-title">
-                       <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Service Now</a>
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1"><b>Service Now</b></a>
                     </h4>
                    </div>
 
@@ -287,10 +403,10 @@
                         <!-- Top SNOW CMDB Tbl -->
                         <table align="center" width="100%" style="overflow-x: auto">
                             <tr id="tr-noborder">
-                                <td class="td-nopadding">
+                                <td class="">
                                     <table border="1" width="95%" class="cmdb-tbl">
-                                        <col width="30%">
-                                        <col width="70%">
+                                        <col width="35%">
+                                        <col width="65%">
                                         <tr>
                                             <th>ServerName</th>
                                             <td>GBEDXCOUDB01</td>
@@ -317,7 +433,7 @@
                                         </tr>
                                     </table>  
                                 </td>
-                                <td class="td-nopadding">
+                                <td class="">
                                     <table border="1" width="95%" class="cmdb-tbl">
                                         <col width="30%">
                                         <col width="70%">
@@ -360,6 +476,14 @@
                         <br/>
                         <!-- SNOW AppMapping -->
                         <table align="center" width="100%" border="1" class="appmapping-tbl">
+                            <col width="25%">
+                            <col width="5%">
+                            <col width="15%">
+                            <col width="15%">
+                            <col width="10%">
+                            <col width="15%">
+                            <col width="15%">
+
                             <tr>
                                 <th>Application</th>
                                 <th>Environment</th>
@@ -414,7 +538,7 @@
                 <div class="panel panel-default">
                   <div class="panel-heading" id="panel-heading-prometheus">
                     <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Prometheus</a>
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2"><b>Prometheus</b></a>
                     </h4>
                   </div>
 
@@ -424,10 +548,10 @@
                         <!-- Top SNOW CMDB Tbl -->
                         <table align="center" width="100%" style="overflow-x: auto">
                             <tr id="tr-noborder">
-                                <td class="td-nopadding">
+                                <td class="" style="vertical-align: top">
                                     <table border="1" width="95%" class="cmdb-tbl">
                                         <col width="30%">
-                                        <col width="70%">
+                                        <col width="65%">
                                         <tr>
                                             <th>ServerName</th>
                                             <td>GBMACCONDB01</td>
@@ -458,10 +582,10 @@
                                         </tr>
                                     </table>  
                                 </td>
-                                <td class="td-nopadding">
-                                    <table border="1" width="95%" class="cmdb-tbl">
-                                        <col width="30%">
-                                        <col width="70%">
+                                <td class="" style="vertical-align: top">
+                                    <table border="1" width="100%" class="cmdb-tbl">
+                                        <col width="25%">
+                                        <col width="75%">
                                         <tr>
                                             <th>Service</th>
                                             <td>SQL Consolidated</td>
@@ -504,10 +628,10 @@
                         <br/>
                         <table align="center" width="100%" style="overflow-x: auto">
                             <tr id="tr-noborder">
-                                <td class="td-nopadding">
+                                <td class="" style="vertical-align: top">
                                     <table border="1" class="cmdb-tbl">
-                                        <col width="30%">
-                                        <col width="70%">
+                                        <col width="55%">
+                                        <col width="45%">
                                         <tr>
                                             <th>Location City</th>
                                             <td>Edinburgh</td>
@@ -530,9 +654,9 @@
                                         </tr>
                                     </table>  
                                 </td>
-                                <td class="td-nopadding">
+                                <td class="" style="vertical-align: top;">
                                     <table border="1" class="cmdb-tbl">
-                                        <col width="30%">
+                                        <col width="35%">
                                         <col width="70%">
                                         <tr>
                                             <th>Infrastructure Team</th>
@@ -563,7 +687,7 @@
                 <div class="panel panel-default">
                   <div class="panel-heading" id="panel-heading-gel">
                     <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">GEL</a>
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3"><b>GEL</b></a>
                     </h4>
                   </div>
 
@@ -573,10 +697,10 @@
                         <!-- Top GEL CMDB Tbl -->
                         <table align="center" width="100%" style="overflow-x: auto">
                             <tr id="tr-noborder">
-                                <td class="td-nopadding">
+                                <td class="td-nopadding" style="vertical-align: top">
                                     <table border="1" width="95%" class="cmdb-tbl">
-                                        <col width="30%">
-                                        <col width="70%">
+                                        <col width="25%">
+                                        <col width="75%">
                                         <tr>
                                             <th>ServerName</th>
                                             <td>LONMS09930</td>
@@ -591,10 +715,10 @@
                                         </tr>
                                     </table>  
                                 </td>
-                                <td class="td-nopadding">
+                                <td class="td-nopadding" style="vertical-align: top">
                                     <table border="1" width="95%" class="cmdb-tbl">
-                                        <col width="30%">
-                                        <col width="70%">
+                                        <col width="40%">
+                                        <col width="60%">
                                         <tr>
                                             <th>Operating System</th>
                                             <td>1Microsoft Windows Server 2008 R2 (64-Bit)</td>
@@ -610,6 +734,16 @@
                         <br/>
                         <!-- GEL AppMapping -->
                         <table align="center" width="100%" border="1" class="appmapping-tbl">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="5%">
+                            <col width="10%">
+                            <col width="6%">
+                            <col width="10%">
+                            <col width="10%">
+
                             <tr>
                                 <th>Application</th>
                                 <th>Environment</th>
@@ -654,147 +788,903 @@
             <!-- Accordion End -->
 
             </div>  
-            </div>
+          </div>
 
-            <!-- SQL Instance Page -->
-            <div id="SQLInstance" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
+          <div id="SQLInstance" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 95%;">
             <div class="w3-container w3-padding-32 w3-center w3-black">
-                <h1>SQL Instances</h1>
 
-                <table class="SQLInstances-tbl" border="1">
-                    <tr><td class="SQLInstanceName">LONMS09930\PMGBVSQL01</td></tr>
-                    <tr>
-                        <th>Database</th>
-                        <th>Data File</th>
-                        <th>Log File</th>
-                        <th>Data Used</th>
-                        <th>Recovery Model</th>
-                        <th>Last Backup</th>
-                    </tr>
-                    <tr>
-                        <td>master</td>
-                        <td>400</td>
-                        <td>50</td>
-                        <td>224</td>
-                        <td>SIMPLE</td>
-                        <td>31/03/2018 22:30</td>
-                    </tr>
-                    <tr>
-                        <td>msdb</td>
-                        <td>1000</td>
-                        <td>250</td>
-                        <td>10</td>
-                        <td>SIMPLE</td>
-                        <td>31/03/2018 22:30</td>
-                    </tr>
-                    <tr>
-                        <td>model</td>
-                        <td>650</td>
-                        <td>100</td>
-                        <td>445</td>
-                        <td>SIMPLE</td>
-                        <td>31/03/2018 22:30</td>
-                    </tr>
-                    <tr>
-                        <td>WSS_Content_01</td>
-                        <td>2500</td>
-                        <td>750</td>
-                        <td>1364</td>
-                        <td>BULK LOGGED</td>
-                        <td>31/03/2018 22:30</td>
-                    </tr>
-                    <tr>
-                        <td>WSS_Content_02</td>
-                        <td>1210</td>
-                        <td>200</td>
-                        <td>453</td>
-                        <td>BULK LOGGED</td>
-                        <td>31/03/2018 22:30</td>
-                    </tr>
-                    <tr>
-                        <td>WSS_Content_03</td>
-                        <td>455</td>
-                        <td>100</td>
-                        <td>200</td>
-                        <td>BULK LOGGED</td>
-                        <td>31/03/2018 22:30</td>
-                    </tr>
-                    <tr>
-                        <td>WSS_Content_04</td>
-                        <td>5000</td>
-                        <td>1250</td>
-                        <td>3463</td>
-                        <td>BULK LOGGED</td>
-                        <td>31/03/2018 22:30</td>
-                    </tr>
-                    <tr>
-                        <td>WSS_Content_05</td>
-                        <td>2420</td>
-                        <td>1000</td>
-                        <td>1543</td>
-                        <td>BULK LOGGED</td>
-                        <td>31/03/2018 22:30</td>
-                    </tr>
-                    <tr>
-                        <td>WSS_Content_06</td>
-                        <td>3420</td>
-                        <td>1000</td>
-                        <td>1364</td>
-                        <td>BULK LOGGED</td>
-                        <td>31/03/2018 22:30</td>
-                    </tr>
-                </table>
-            </div>  
-            </div>
+            <!-- Accordion Start -->
+              <div class="panel-group w5-content" id="accordion" style="color: black; font-display: block;">
+                <div class="panel panel-default">
+                  <div class="panel-heading" id="panel-heading-instance">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#SQLInstanceCollapse"><b>PMGBVSQL01</b></a>
+                    </h4>
+                   </div>
+                </div>
+                  
+                  <!-- ServiceNow Collapse -->
+                  <div id="SQLInstanceCollapse" class="panel-collapse collapse in">
+                    <div  class="panel-body">
+                        <div class="instance_info">
+                            <p><b>Instance Information</b></p>
+                            
+                            <table class="SQLInstances-tbls" border="1" style="width: 35%">
+                                <col width="30%">
+                                <col width="565%">
+                                <tr>
+                                    <th>Instance Name</th>
+                                    <td>LONMS09930\PMGBVSQL01</td>
+                                </tr>
+                                <tr>
+                                    <th>SQL Version</th>
+                                    <td>SQL 2012 SP2 (12.0.6542)</td>
+                                </tr>
+                                <tr>
+                                    <th>Clustered</th>
+                                    <td>Yes</td>
+                                </tr>
+                                <tr>
+                                    <th>Environment</th>
+                                    <td>Production</td>
+                                </tr>
+                                <tr>
+                                    <th>SQL Service</th>
+                                    <td>EUROPA\Service-SQLApp</td>
+                                </tr>
+                                <tr>
+                                    <th>Agent Service</th>
+                                    <td>EUROPA\Service-SQLApp</td>
+                                </tr>
+                                <tr>
+                                    <th>TCP Port</th>
+                                    <td>15010</td>
+                                </tr>
+                                <tr>
+                                    <th>Build Date</th>
+                                    <td>24/06/2016</td>
+                                </tr>
+                                <tr>
+                                    <th>DBA Admin Version</th>
+                                    <td>8.1</td>
+                                </tr>
+                            </table>
 
-            <!-- SQL Logins Page -->
-            <div id="SQLLogins" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
+                            <table class="SQLInstances-tbls" border="1" style="width: 30%">
+                                <col width="30%">
+                                <col width="50%">
+                                <tr>
+                                    <th>Location</th>
+                                    <td>MacMerry</td>
+                                </tr>
+                                <tr>
+                                    <th>DataCentre</th>
+                                    <td>DC-01-A2</td>
+                                </tr>
+                                <tr>
+                                    <th>Rack Location</th>
+                                    <td>A1-03-A4</td>
+                                </tr>
+                                <tr>
+                                    <th>Active Host</th>
+                                    <td>LONMS09930</td>
+                                </tr>
+                                <tr>
+                                    <th>Model</th>
+                                    <td>HP Proliant G3 820</td>
+                                </tr>
+                                <tr>
+                                    <th>Memory</th>
+                                    <td>10GB</td>
+                                </tr>
+                                <tr>
+                                    <th>SQL Min</th>
+                                    <td>0 GB</td>
+                                </tr>
+                                <tr>
+                                    <th>SQL Max</th>
+                                    <td>6 GB</td>
+                                </tr>
+                                <tr>
+                                    <th>OS</th>
+                                    <td>8.1</td>
+                                </tr>
+                            </table>
+
+                            <table class="SQLInstances-tbls" border="1" style="width: 35%;">
+                                <col width="20%">
+                                <tr>
+                                    <th>CPUs</th>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <th>CPU (MHz)</th>
+                                    <td>42300</td>
+                                </tr>
+                                <tr>
+                                    <th>OS</th>
+                                    <td>Windows Server 2012 R2 SP4</td>
+                                </tr>
+                                <tr>
+                                    <th>Status</th>
+                                    <td>Active</td>
+                                </tr>
+                                <tr>
+                                    <th>Uptime</th>
+                                    <td>132 Days</td>
+                                </tr>
+                                <tr>
+                                    <th>SQL Conn</th>
+                                    <td>15/04/2018 12:32</td>
+                                </tr>
+                                <tr>
+                                    <th>WMI Conn</th>
+                                    <td>12/03/2018 00:02</td>
+                                </tr>
+                                <tr>
+                                    <th>Local Time</th>
+                                    <td>16:47:21</td>
+                                </tr>
+                            </table>
+                        </div>
+                      
+                        
+                        <div class="kb_info">
+                            <p><b>SQL KB Records</b></p>   
+                            
+                            <table class="SQLDatabases-tbl" border="1">
+                                <tr>
+                                    <th>Record Title</th>
+                                    <th>Record Date</th>
+                                    <th>Record Information</th>
+                                </tr>
+                                <tr>
+                                    <td>SLX Elevation Group</td>
+                                    <td>22/01/2018</td>
+                                    <td>The SLX Elevation Group for this instance is EUROPA\rSQLSPS</td>
+                                </tr>
+                                <tr>
+                                    <td>Patching Exception</td>
+                                    <td>09/11/2016</td>
+                                    <td>There is a current patching exception on this instance due to the vendor (OpenText Ltd.) not supporting our current Gold Level versions. Orbit risk OR012345 has been raised to cover this issue.</td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <div class="database_info"> 
+                            <p><b>Database Information</b></p>
+                            <!-- First Instance Table -->
+                            <table class="SQLDatabases-tbl" border="1">
+                                <tr>
+                                    <th>Database</th>
+                                    <th>Data File</th>
+                                    <th>Log File</th>
+                                    <th>Data Used</th>
+                                    <th>Recovery Model</th>
+                                    <th>Last Backup</th>
+                                </tr>
+                                <tr>
+                                    <td>master</td>
+                                    <td>400</td>
+                                    <td>50</td>
+                                    <td>224</td>
+                                    <td>SIMPLE</td>
+                                    <td>31/03/2018 22:30</td>
+                                </tr>
+                                <tr>
+                                    <td>msdb</td>
+                                    <td>1000</td>
+                                    <td>250</td>
+                                    <td>10</td>
+                                    <td>SIMPLE</td>
+                                    <td>31/03/2018 22:30</td>
+                                </tr>
+                                <tr>
+                                    <td>model</td>
+                                    <td>650</td>
+                                    <td>100</td>
+                                    <td>445</td>
+                                    <td>SIMPLE</td>
+                                    <td>31/03/2018 22:30</td>
+                                </tr>
+                                <tr>
+                                    <td>WSS_Content_01</td>
+                                    <td>2500</td>
+                                    <td>750</td>
+                                    <td>1364</td>
+                                    <td>BULK LOGGED</td>
+                                    <td>31/03/2018 22:30</td>
+                                </tr>
+                                <tr>
+                                    <td>WSS_Content_02</td>
+                                    <td>1210</td>
+                                    <td>200</td>
+                                    <td>453</td>
+                                    <td>BULK LOGGED</td>
+                                    <td>31/03/2018 22:30</td>
+                                </tr>
+                                <tr>
+                                    <td>WSS_Content_03</td>
+                                    <td>455</td>
+                                    <td>100</td>
+                                    <td>200</td>
+                                    <td>BULK LOGGED</td>
+                                    <td>31/03/2018 22:30</td>
+                                </tr>
+                                <tr>
+                                    <td>WSS_Content_04</td>
+                                    <td>5000</td>
+                                    <td>1250</td>
+                                    <td>3463</td>
+                                    <td>BULK LOGGED</td>
+                                    <td>31/03/2018 22:30</td>
+                                </tr>
+                                <tr>
+                                    <td>WSS_Content_05</td>
+                                    <td>2420</td>
+                                    <td>1000</td>
+                                    <td>1543</td>
+                                    <td>BULK LOGGED</td>
+                                    <td>31/03/2018 22:30</td>
+                                </tr>
+                                <tr>
+                                    <td>WSS_Content_06</td>
+                                    <td>3420</td>
+                                    <td>1000</td>
+                                    <td>1364</td>
+                                    <td>BULK LOGGED</td>
+                                    <td>31/03/2018 22:30</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- ServiceNow End -->
+                </div>
+                  
+                <div class="panel panel-default">
+                  <div class="panel-heading" id="panel-heading-instance">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#SQLInstanceCollapse2"><b>PMGBVSQL02</b></a>
+                    </h4>
+                  </div>
+                </div>
+                  
+                <div id="SQLInstanceCollapse2" class="panel-collapse collapse in">
+                    <div  class="panel-body">
+                        <div class="instance_info">
+                            <p><b>Instance Information</b></p>
+                            
+                            <table class="SQLInstances-tbls" border="1" style="width: 35%">
+                                <col width="30%">
+                                <col width="565%">
+                                <tr>
+                                    <th>Instance Name</th>
+                                    <td>LONMS09930\PMGBVSQL01</td>
+                                </tr>
+                                <tr>
+                                    <th>SQL Version</th>
+                                    <td>SQL 2012 SP2 (12.0.6542)</td>
+                                </tr>
+                                <tr>
+                                    <th>Clustered</th>
+                                    <td>Yes</td>
+                                </tr>
+                                <tr>
+                                    <th>Environment</th>
+                                    <td>Production</td>
+                                </tr>
+                                <tr>
+                                    <th>SQL Service</th>
+                                    <td>EUROPA\Service-SQLApp</td>
+                                </tr>
+                                <tr>
+                                    <th>Agent Service</th>
+                                    <td>EUROPA\Service-SQLApp</td>
+                                </tr>
+                                <tr>
+                                    <th>TCP Port</th>
+                                    <td>15010</td>
+                                </tr>
+                                <tr>
+                                    <th>Build Date</th>
+                                    <td>24/06/2016</td>
+                                </tr>
+                                <tr>
+                                    <th>DBA Admin Version</th>
+                                    <td>8.1</td>
+                                </tr>
+                            </table>
+
+                            <table class="SQLInstances-tbls" border="1" style="width: 30%">
+                                <col width="30%">
+                                <col width="50%">
+                                <tr>
+                                    <th>Location</th>
+                                    <td>MacMerry</td>
+                                </tr>
+                                <tr>
+                                    <th>DataCentre</th>
+                                    <td>DC-01-A2</td>
+                                </tr>
+                                <tr>
+                                    <th>Rack Location</th>
+                                    <td>A1-03-A4</td>
+                                </tr>
+                                <tr>
+                                    <th>Active Host</th>
+                                    <td>LONMS09930</td>
+                                </tr>
+                                <tr>
+                                    <th>Model</th>
+                                    <td>HP Proliant G3 820</td>
+                                </tr>
+                                <tr>
+                                    <th>Memory</th>
+                                    <td>10GB</td>
+                                </tr>
+                                <tr>
+                                    <th>SQL Min</th>
+                                    <td>0 GB</td>
+                                </tr>
+                                <tr>
+                                    <th>SQL Max</th>
+                                    <td>6 GB</td>
+                                </tr>
+                                <tr>
+                                    <th>OS</th>
+                                    <td>8.1</td>
+                                </tr>
+                            </table>
+
+                            <table class="SQLInstances-tbls" border="1" style="width: 35%;">
+                                <col width="20%">
+                                <tr>
+                                    <th>CPUs</th>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <th>CPU (MHz)</th>
+                                    <td>42300</td>
+                                </tr>
+                                <tr>
+                                    <th>OS</th>
+                                    <td>Windows Server 2012 R2 SP4</td>
+                                </tr>
+                                <tr>
+                                    <th>Status</th>
+                                    <td>Active</td>
+                                </tr>
+                                <tr>
+                                    <th>Uptime</th>
+                                    <td>132 Days</td>
+                                </tr>
+                                <tr>
+                                    <th>SQL Conn</th>
+                                    <td>15/04/2018 12:32</td>
+                                </tr>
+                                <tr>
+                                    <th>WMI Conn</th>
+                                    <td>12/03/2018 00:02</td>
+                                </tr>
+                                <tr>
+                                    <th>Local Time</th>
+                                    <td>16:47:21</td>
+                                </tr>
+                            </table>
+                        </div>
+                      
+                        
+                        <div class="kb_info">
+                            <p><b>SQL KB Records</b></p>   
+                            
+                            <table class="SQLDatabases-tbl" border="1">
+                                <tr>
+                                    <th>Record Title</th>
+                                    <th>Record Date</th>
+                                    <th>Record Information</th>
+                                </tr>
+                                <tr>
+                                    <td>SLX Elevation Group</td>
+                                    <td>22/01/2018</td>
+                                    <td>The SLX Elevation Group for this instance is EUROPA\rSQLSPS</td>
+                                </tr>
+                                <tr>
+                                    <td>Patching Exception</td>
+                                    <td>09/11/2016</td>
+                                    <td>There is a current patching exception on this instance due to the vendor (OpenText Ltd.) not supporting our current Gold Level versions. Orbit risk OR012345 has been raised to cover this issue.</td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <div class="database_info"> 
+                            <p><b>Database Information</b></p>
+                            <!-- First Instance Table -->
+                            <table class="SQLDatabases-tbl" border="1">
+                                <tr>
+                                    <th>Database</th>
+                                    <th>Data File</th>
+                                    <th>Log File</th>
+                                    <th>Data Used</th>
+                                    <th>Recovery Model</th>
+                                    <th>Last Backup</th>
+                                </tr>
+                                <tr>
+                                    <td>master</td>
+                                    <td>400</td>
+                                    <td>50</td>
+                                    <td>224</td>
+                                    <td>SIMPLE</td>
+                                    <td>31/03/2018 22:30</td>
+                                </tr>
+                                <tr>
+                                    <td>msdb</td>
+                                    <td>1000</td>
+                                    <td>250</td>
+                                    <td>10</td>
+                                    <td>SIMPLE</td>
+                                    <td>31/03/2018 22:30</td>
+                                </tr>
+                                <tr>
+                                    <td>model</td>
+                                    <td>650</td>
+                                    <td>100</td>
+                                    <td>445</td>
+                                    <td>SIMPLE</td>
+                                    <td>31/03/2018 22:30</td>
+                                </tr>
+                                <tr>
+                                    <td>WSS_Content_01</td>
+                                    <td>2500</td>
+                                    <td>750</td>
+                                    <td>1364</td>
+                                    <td>BULK LOGGED</td>
+                                    <td>31/03/2018 22:30</td>
+                                </tr>
+                                <tr>
+                                    <td>WSS_Content_02</td>
+                                    <td>1210</td>
+                                    <td>200</td>
+                                    <td>453</td>
+                                    <td>BULK LOGGED</td>
+                                    <td>31/03/2018 22:30</td>
+                                </tr>
+                                <tr>
+                                    <td>WSS_Content_03</td>
+                                    <td>455</td>
+                                    <td>100</td>
+                                    <td>200</td>
+                                    <td>BULK LOGGED</td>
+                                    <td>31/03/2018 22:30</td>
+                                </tr>
+                                <tr>
+                                    <td>WSS_Content_04</td>
+                                    <td>5000</td>
+                                    <td>1250</td>
+                                    <td>3463</td>
+                                    <td>BULK LOGGED</td>
+                                    <td>31/03/2018 22:30</td>
+                                </tr>
+                                <tr>
+                                    <td>WSS_Content_05</td>
+                                    <td>2420</td>
+                                    <td>1000</td>
+                                    <td>1543</td>
+                                    <td>BULK LOGGED</td>
+                                    <td>31/03/2018 22:30</td>
+                                </tr>
+                                <tr>
+                                    <td>WSS_Content_06</td>
+                                    <td>3420</td>
+                                    <td>1000</td>
+                                    <td>1364</td>
+                                    <td>BULK LOGGED</td>
+                                    <td>31/03/2018 22:30</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                  </div>
+              </div> 
+            <!-- Accordion End -->
+
+              </div> 
+          </div>
+
+          <div id="SQLLogins" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
             <div class="w3-container w3-padding-32 w3-center w3-black">
                 <h1>SQL Logins</h1>
             </div>  
-            </div>
+          </div>
 
-            <!-- DiskSpace Page -->
-            <div id="DiskSpace" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
+          <div id="DiskSpace" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
             <div class="w3-container w3-padding-32 w3-center w3-black">
                 <h1>Disk Space</h1>
             </div>  
-            </div>
+          </div>
 
-            <!-- vSphere Page -->
-            <div id="vSphere" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
+          <!-- vSPHERE OVERALL DATA CONTAINER -->
+          <div id="vSphere" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 95%;">
             <div class="w3-container w3-padding-32 w3-center w3-black">
-                <h1>vSphere</h1>
-            </div>  
-            </div>
 
-            <!-- Services Page -->
-            <div id="Services" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
-            <div class="w3-container w3-padding-32 w3-center w3-black">
-                <h1>Services</h1>
-            </div>  
-            </div>
+            <!-- VM HARDWARE ACCORDION -->
+              <div class="panel-group w5-content" id="accordion" style="color: black; font-display: block;">
+                <div class="panel panel-default">
+                  
+                  <!-- VM HARDWARE PANEL HEADING -->
+                  <div class="panel-heading" id="panel-heading-snow">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#VMHW_Cobllapse"><b>VM Hardware</b></a>
+                    </h4>
+                  </div>
 
-            <!-- LocalAdmins Page -->
-            <div id="LocalAdmins" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
+                  <!-- VM HARDWARE DATA COLLAPSE -->
+                  <div id="VMHW_Collapse" class="panel-collapse collapse in">
+                    <table border="1" style="overflow-x: auto" align="center">
+                        <tr style="border: none; border-color: white; vertical-align: top">
+                            <th style="width: 50%;">
+                                <!-- CPU INFO ACCORDIONA -->
+                                <div class="panel-group w5-content" id="VMCPU_Accordion" style="color: black; font-display: block; width:100%">
+                                    <div class="panel panel-default">
+                                        
+                                        <!-- CPU INFO PANEL HEADING -->
+                                        <div class="panel-heading" id="panel-heading-VMCPU">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#VMCPU_Accordion" href="#VMCPU_Collapse" onclick="ArrowRotate('CPU_Arrow')">
+                                                    <i id="CPU_Arrow" class="fa fa-angle-right"></i><b> CPU Information</b>
+
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        
+                                        <!-- CPU INFO DATA COLLAPSE -->
+                                        <div id="VMCPU_Collapse" class="panel-collapse collapse in">
+                                            <table style="overflow-x: auto" align="center">
+                                                <col width="30%">
+                                                <col width="70%">
+                                                <tr>
+                                                    <th>CPU Utilisation</th>
+                                                    <td>34.5%</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>CPU Cores</th>
+                                                    <td>4</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Numa Nodes</th>
+                                                    <td>2</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </th>
+                            <th style="width: 50%;">
+                                <!-- CPU INFO ACCORDIONA -->
+                                <div class="panel-group w5-content" id="VMHDD_Accordion" style="color: black; font-display: block; width:100%">
+                                    <div class="panel panel-default">
+                                        
+                                        <!-- CPU INFO PANEL HEADING -->
+                                        <div class="panel-heading" id="panel-heading-VMCPU">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#VMCPU_Accordion" href="#VMHDD_Collapse" onclick="ArrowRotate('CPU_Arrow')">
+                                                    <i id="CPU_Arrow" class="fa fa-angle-right"></i><b> HDD Information </b>
+
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        
+                                        <!-- CPU INFO DATA COLLAPSE -->
+                                        <div id="VMHDD_Collapse" class="panel-collapse collapse in">
+                                            <table style="overflow-x: auto" align="center">
+                                                <col width="25%">
+                                                <col width="25%">
+                                                <col width="25%">
+                                                <col width="25%">
+                                                <tr>
+                                                    <b></b>
+                                                    <th>Free</th>
+                                                    <th>Used</th>
+                                                    <th>Total</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Disk 1</th>
+                                                    <td>32.4 GB</td>
+                                                    <td>17.6 GB</td>
+                                                    <td>50 GB</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Disk 2</th>
+                                                    <td>32.4 GB</td>
+                                                    <td>17.6 GB</td>
+                                                    <td>50 GB</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Disk 3</th>
+                                                    <td>32.4 GB</td>
+                                                    <td>17.6 GB</td>
+                                                    <td>50 GB</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Disk 4</th>
+                                                    <td>32.4 GB</td>
+                                                    <td>17.6 GB</td>
+                                                    <td>50 GB</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                    </table>
+                  </div>
+                    
+                    
+                </div>
+              </div> 
+            <!-- Accordion End -->
+
+            </div>  
+          </div>
+
+          <div id="Services" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 95%;">
+               <div class="w3-center">
+                   <table class="Services-tbl" border="1">
+                    <tr>
+                        <th>Service</th>
+                        <th>Display Name</th>
+                        <th>Description</th>
+                        <th>Start Type</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                       <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                       </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>MSSQL$PMGBVSQL01</td>
+                        <td>SQL Server (PMGBVSQL01)</td>
+                        <td>This service runs the SQL Server application</td>
+                        <td>Automatic</td>
+                        <td>Running</td>
+                    </tr>
+                </table>
+              </div> 
+          </div>
+            
+          <div id="LocalAdmins" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
             <div class="w3-container w3-padding-32 w3-center w3-black">
                 <h1>Local Admins</h1>
             </div>  
-            </div>
+          </div>
 
-            <!-- Tivoli Page -->
-            <div id="Tivoli" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
+          <div id="Tivoli" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
             <div class="w3-container w3-padding-32 w3-center w3-black">
                 <h1>Tivoli</h1>
             </div>  
-            </div>
+          </div>
 
-        </div>
+
         <!-- END PAGE CONTENT -->
-        <!--#############################################################################-->
-        
-        
-    </body>
-<!--#####################################################################################################################-->
-</html>
+        </div>
 
+    </body>
+</html>
