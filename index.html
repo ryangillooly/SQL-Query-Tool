@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html>
+    
+    <!-- CSS/Script Imports -->
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8"                                 >
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"                 >
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"                                              >
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"                                    >
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"    >
+   
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         
@@ -271,17 +277,11 @@
                 if(x.classList.contains('fa fa-angle-down')){x.classList.className = "fa fa-angle-right";}
             }
         </script>
-    
+        
+        <title>Host Hunter</title>
     </head>
     
-    <title>Host Hunter</title>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <!-- Inline StyleSheet -->
     <style>
         html, body {font-size: 0.9em}
         
@@ -371,75 +371,32 @@
         .SQLInstances-tbls {float: left; width: 33.33333%}
     </style>
 
+    <!-- Main Body Code -->
     <body class="w3-black">
+        
         <!-- Icon Bar (Sidebar - hidden on small screens) -->
         <nav class="w3-top w3-center w3-black" id="myNavbar">
-          <!-- Avatar image in top left corner -->
-          <!--
-            <img src="RBS.png" width="40%" style="margin: 5px;">
-          -->
-          <a href="#" onclick="itemClick('CMDB')" class="w3-bar-item w3-button" id="CMDB_btn">
-            CMDB
-          </a>
-
-          <a href="#" onclick="itemClick('SQLInstance')" href class="w3-bar-item w3-button" id="SQLInstance_btn">
-            SQL Instance
-          </a>
-
-          <a href="#" onclick="itemClick('SQLLogins')" class="w3-bar-item w3-button" id="SQLLogins_btn">
-            SQL Logins
-          </a>
-
-          <a href="#" onclick="itemClick('DiskSpace')" class="w3-bar-item w3-button" id="DiskSpace_btn">
-            Disk Space
-          </a>
-
-          <a href="#" onclick="itemClick('vSphere')" class="w3-bar-item w3-button" id="vSphere_btn">
-            vSphere
-          </a>
-
-          <a href="#" onclick="itemClick('Services')" class="w3-bar-item w3-button" id="Services_btn">
-            Services
-          </a>
-
-          <a href="#" onclick="itemClick('LocalAdmins')" class="w3-bar-item w3-button" id="LocalAdmins_btn">
-            Local Admins
-          </a>
-
-          <a href="#" onclick="itemClick('Tivoli')" class="w3-bar-item w3-button" id="Tivoli_btn">
-            Tivoli
-          </a>
-
-          <a href="#" onclick="itemClick('Sharepoint')" class="w3-bar-item w3-button" id="Sharepoint_btn">
-            Sharepoint
-          </a>
-            
-          
-
+            <a href="#" onclick="itemClick('CMDB')"         class="w3-bar-item w3-button" id="CMDB_btn"         >CMDB</a>
+            <a href="#" onclick="itemClick('SQLInstance')"  class="w3-bar-item w3-button" id="SQLInstance_btn"  >SQL Instance</a>
+            <a href="#" onclick="itemClick('SQLLogins')"    class="w3-bar-item w3-button" id="SQLLogins_btn"    >SQL Logins</a>
+            <a href="#" onclick="itemClick('DiskSpace')"    class="w3-bar-item w3-button" id="DiskSpace_btn"    >Disk Space</a>
+            <a href="#" onclick="itemClick('vSphere')"      class="w3-bar-item w3-button" id="vSphere_btn"      >vSphere</a>
+            <a href="#" onclick="itemClick('Services')"     class="w3-bar-item w3-button" id="Services_btn"     >Services</a>
+            <a href="#" onclick="itemClick('LocalAdmins')"  class="w3-bar-item w3-button" id="LocalAdmins_btn"  >Local Admins</a>
+            <a href="#" onclick="itemClick('Tivoli')"       class="w3-bar-item w3-button" id="Tivoli_btn"       >Tivoli</a>
+            <a href="#" onclick="itemClick('Sharepoint')"   class="w3-bar-item w3-button" id="Sharepoint_btn"   >Sharepoint</a>
         </nav>
 
-        <!-- Navbar on small screens (Hidden on medium and large screens) -->
-        <!--
-            <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-              <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-                <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-                <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-                <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
-                <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
-              </div>
-            </div>
-        -->
         <!-- Page Content -->
         <div id="main">
-          <!-- Header/Home -->
-          <header class="w3-container w3-center w3-black" id="home">
+            
+            <!-- Header/Home -->
+            <header class="w3-container w3-center w3-black" id="home">
             <h1 id="ServerName"><span class="w3-hide-small">LONMS09930</span></h1>
-          </header>
+            </header>
 
-
-
-          <!-- CMDB Page -->
-          <div id="CMDB" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 95%;">
+            <!-- CMDB Page -->
+            <div id="CMDB" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 95%;">
             <div class="w3-container w3-padding-32 w3-center w3-black">
 
             <!-- Accordion Start -->
@@ -842,10 +799,10 @@
             <!-- Accordion End -->
 
             </div>  
-          </div>
-            
-          <!-- SQL Instance Page -->    
-          <div id="SQLInstance" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 95%;">
+            </div>
+
+            <!-- SQL Instance Page -->    
+            <div id="SQLInstance" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 95%;">
             <div class="w3-container w3-padding-32 w3-center w3-black">
 
             <!-- Accordion Start -->
@@ -857,13 +814,13 @@
                     </h4>
                    </div>
                 </div>
-                  
+
                   <!-- ServiceNow Collapse -->
                   <div id="SQLInstanceCollapse" class="panel-collapse collapse in">
                     <div  class="panel-body">
                         <div class="instance_info">
                             <p><b>Instance Information</b></p>
-                            
+
                             <table class="SQLInstances-tbls" border="1" style="width: 35%">
                                 <col width="30%">
                                 <col width="565%">
@@ -982,11 +939,11 @@
                                 </tr>
                             </table>
                         </div>
-                      
-                        
+
+
                         <div class="kb_info">
                             <p><b>SQL KB Records</b></p>   
-                            
+
                             <table class="SQLDatabases-tbl" border="1">
                                 <tr>
                                     <th>Record Title</th>
@@ -1005,7 +962,7 @@
                                 </tr>
                             </table>
                         </div>
-                        
+
                         <div class="database_info"> 
                             <p><b>Database Information</b></p>
                             <!-- First Instance Table -->
@@ -1096,7 +1053,7 @@
                   </div>
                   <!-- ServiceNow End -->
                 </div>
-                  
+
                 <div class="panel panel-default">
                   <div class="panel-heading" id="panel-heading-instance">
                     <h4 class="panel-title">
@@ -1104,12 +1061,12 @@
                     </h4>
                   </div>
                 </div>
-                  
+
                 <div id="SQLInstanceCollapse2" class="panel-collapse collapse in">
                     <div  class="panel-body">
                         <div class="instance_info">
                             <p><b>Instance Information</b></p>
-                            
+
                             <table class="SQLInstances-tbls" border="1" style="width: 35%">
                                 <col width="30%">
                                 <col width="565%">
@@ -1228,11 +1185,11 @@
                                 </tr>
                             </table>
                         </div>
-                      
-                        
+
+
                         <div class="kb_info">
                             <p><b>SQL KB Records</b></p>   
-                            
+
                             <table class="SQLDatabases-tbl" border="1">
                                 <tr>
                                     <th>Record Title</th>
@@ -1251,7 +1208,7 @@
                                 </tr>
                             </table>
                         </div>
-                        
+
                         <div class="database_info"> 
                             <p><b>Database Information</b></p>
                             <!-- First Instance Table -->
@@ -1343,10 +1300,10 @@
               </div> 
             <!-- Accordion End -->
 
-          </div>
+            </div>
 
-          <!-- SQL Logins Page -->
-          <div id="SQLLogins" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
+            <!-- SQL Logins Page -->
+            <div id="SQLLogins" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
             <div class="w3-center">
                    <table class="SQLLogins-tbl" border="1">
                     <tr>
@@ -1411,10 +1368,10 @@
                     </tr>
                 </table>
               </div>  
-          </div>
+            </div>
 
-          <!-- Disk Space Page -->    
-          <div id="DiskSpace" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
+            <!-- Disk Space Page -->    
+            <div id="DiskSpace" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
             <div class="w3-center">
                    <table class="DiskSpace-tbl" border="1">
                     <tr>
@@ -1475,16 +1432,16 @@
                     </tr>
                 </table>
               </div>  
-          </div>
+            </div>
 
-          <!--vSphere Page -->
-          <div id="vSphere" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 95%;">
+            <!--vSphere Page -->
+            <div id="vSphere" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 95%;">
             <div class="w3-container w3-padding-32 w3-center w3-black">
 
             <!-- VM HARDWARE ACCORDION -->
               <div class="panel-group w5-content" id="accordion" style="color: black; font-display: block;">
                 <div class="panel panel-default">
-                  
+
                   <!-- VM HARDWARE PANEL HEADING -->
                   <div class="panel-heading" id="panel-heading-snow">
                     <h4 class="panel-title">
@@ -1495,12 +1452,201 @@
                   <!-- VM HARDWARE DATA COLLAPSE -->
                   <div id="VMHW_Collapse" class="panel-collapse collapse in">
                     <table border="1" style="overflow-x: auto" align="center">
+
+                        <!-- VM / Host Info Row -->
                         <tr style="border: none; border-color: white; vertical-align: top">
+
+                            <!-- VM Info Table Sector -->
                             <th style="width: 50%;">
+
+                                <!-- VM Info ACCORDIONA -->
+                                <div class="panel-group w5-content" id="VMCPU_Accordion" style="color: black; font-display: block; width:100%">
+                                    <div class="panel panel-default">
+
+                                        <!-- VM Info PANEL HEADING -->
+                                        <div class="panel-heading" id="panel-heading-VMCPU">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#VMCPU_Accordion" href="#VMCPU_Collapse" onclick="ArrowRotate('CPU_Arrow')">
+                                                    <i id="CPU_Arrow" class="fa fa-angle-right"></i><b> Virtual Machine Information</b>
+
+                                                </a>
+                                            </h4>
+                                        </div>
+
+                                        <!-- VM Info DATA COLLAPSE -->
+                                        <div id="VMCPU_Collapse" class="panel-collapse collapse in">
+                                            <table style="overflow-x: auto" align="center">
+                                                <col width="50%">
+                                                <col width="50%">
+                                                <tr>
+                                                    <th>Display Name</th>
+                                                    <td>GBMACTTPDB01-Temp</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>DNS Name</th>
+                                                    <td>GBMACTTPDB01.rbsres01.net</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>State</th>
+                                                    <td>Powered ON</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Guest OS</th>
+                                                    <td>Windows Server 2012 R2</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Host</th>
+                                                    <td>GBMACVIRVS20</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>HA Protection</th>
+                                                    <td>Yes</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>SRM Protection</th>
+                                                    <td>Yes</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>IP Addresses</th>
+                                                    <td>11.135.32.145, 11.143.33.123</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>VLANs</th>
+                                                    <td>322, 475</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>CPUs</th>
+                                                    <td>2</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Memory</th>
+                                                    <td>64GB</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Disks</th>
+                                                    <td>5</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </th>
+
+                            <!-- Host Info Table Sector -->
+                            <th style="width: 50%;">
+                                <!-- Host INFO ACCORDIONA -->
+                                <div class="panel-group w5-content" id="VMHDD_Accordion" style="color: black; font-display: block; width:100%">
+                                    <div class="panel panel-default">
+
+                                        <!-- Host INFO PANEL HEADING -->
+                                        <div class="panel-heading" id="panel-heading-VMCPU">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#VMCPU_Accordion" href="#VMHDD_Collapse" onclick="ArrowRotate('CPU_Arrow')">
+                                                    <i id="CPU_Arrow" class="fa fa-angle-right"></i><b> Host Information </b>
+
+                                                </a>
+                                            </h4>
+                                        </div>
+
+                                        <!-- Host INFO DATA COLLAPSE -->
+                                        <div id="VMHDD_Collapse" class="panel-collapse collapse in">
+                                            <table style="overflow-x: auto" align="center">
+                                                <col width="20%">
+                                                <col width="20%">
+                                                <tr>
+                                                    <th>Cluster Name</th>
+                                                    <th>Host Name</th>
+                                                    <th>State</th>
+                                                    <th>Active VM Host</th>
+                                                    <th>CPUs</th>
+                                                    <th>Memory</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>GBMACVIRVS20</td>
+                                                    <td>GBMACVIRVS20N01</td>
+                                                    <td>Online</td>
+                                                    <td>No</td>
+                                                    <td>120</td>
+                                                    <td>1024 GB</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>GBMACVIRVS20</td>
+                                                    <td>GBMACVIRVS20N02</td>
+                                                    <td>Online</td>
+                                                    <td>No</td>
+                                                    <td>120</td>
+                                                    <td>1024 GB</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>GBMACVIRVS20</td>
+                                                    <td>GBMACVIRVS20N03</td>
+                                                    <td>Online</td>
+                                                    <td>No</td>
+                                                    <td>120</td>
+                                                    <td>1024 GB</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>GBMACVIRVS20</td>
+                                                    <td>GBMACVIRVS20N04</td>
+                                                    <td>Online</td>
+                                                    <td>No</td>
+                                                    <td>120</td>
+                                                    <td>1024 GB</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>GBMACVIRVS20</td>
+                                                    <td>GBMACVIRVS20N05</td>
+                                                    <td>Online</td>
+                                                    <td>Yes</td>
+                                                    <td>120</td>
+                                                    <td>1024 GB</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>GBMACVIRVS20</td>
+                                                    <td>GBMACVIRVS20N06</td>
+                                                    <td>Offline</td>
+                                                    <td>No</td>
+                                                    <td>120</td>
+                                                    <td>1024 GB</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>GBMACVIRVS20</td>
+                                                    <td>GBMACVIRVS20N07</td>
+                                                    <td>Offline</td>
+                                                    <td>No</td>
+                                                    <td>120</td>
+                                                    <td>1024 GB</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>GBMACVIRVS20</td>
+                                                    <td>GBMACVIRVS20N08</td>
+                                                    <td>Online</td>
+                                                    <td>No</td>
+                                                    <td>120</td>
+                                                    <td>1024 GB</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </th>
+
+                        </tr>
+
+                        <!-- CPU Info / HDD Info Row -->
+                        <tr style="border: none; border-color: white; vertical-align: top">
+
+                            <!-- CPU Info Table Sector -->
+                            <th style="width: 50%;">
+
                                 <!-- CPU INFO ACCORDIONA -->
                                 <div class="panel-group w5-content" id="VMCPU_Accordion" style="color: black; font-display: block; width:100%">
                                     <div class="panel panel-default">
-                                        
+
                                         <!-- CPU INFO PANEL HEADING -->
                                         <div class="panel-heading" id="panel-heading-VMCPU">
                                             <h4 class="panel-title">
@@ -1510,7 +1656,7 @@
                                                 </a>
                                             </h4>
                                         </div>
-                                        
+
                                         <!-- CPU INFO DATA COLLAPSE -->
                                         <div id="VMCPU_Collapse" class="panel-collapse collapse in">
                                             <table style="overflow-x: auto" align="center">
@@ -1530,16 +1676,18 @@
                                                 </tr>
                                             </table>
                                         </div>
-                                        
-                                        
+
+
                                     </div>
                                 </div>
                             </th>
+
+                            <!-- HDD Info Table Sector -->
                             <th style="width: 50%;">
                                 <!-- CPU INFO ACCORDIONA -->
                                 <div class="panel-group w5-content" id="VMHDD_Accordion" style="color: black; font-display: block; width:100%">
                                     <div class="panel panel-default">
-                                        
+
                                         <!-- CPU INFO PANEL HEADING -->
                                         <div class="panel-heading" id="panel-heading-VMCPU">
                                             <h4 class="panel-title">
@@ -1549,7 +1697,7 @@
                                                 </a>
                                             </h4>
                                         </div>
-                                        
+
                                         <!-- CPU INFO DATA COLLAPSE -->
                                         <div id="VMHDD_Collapse" class="panel-collapse collapse in">
                                             <table style="overflow-x: auto" align="center">
@@ -1558,7 +1706,7 @@
                                                 <col width="25%">
                                                 <col width="25%">
                                                 <tr>
-                                                    <b></b>
+                                                    <th> </th>
                                                     <th>Free</th>
                                                     <th>Used</th>
                                                     <th>Total</th>
@@ -1589,25 +1737,27 @@
                                                 </tr>
                                             </table>
                                         </div>
-                                        
-                                        
+
+
                                     </div>
                                 </div>
                             </th>
+
                         </tr>
+
                     </table>
                   </div>
-                    
-                    
+
+
                 </div>
               </div> 
             <!-- Accordion End -->
 
             </div>  
-          </div>
+            </div>
 
-          <!-- Services -->
-          <div id="Services" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 95%;">
+            <!-- Services -->
+            <div id="Services" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 95%;">
                <div class="w3-center">
                    <table class="Services-tbl" border="1">
                     <tr>
@@ -1724,32 +1874,32 @@
                     </tr>
                 </table>
               </div> 
-          </div>
-            
-          <!-- Local Admins Page -->
-          <div id="LocalAdmins" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
+            </div>
+
+            <!-- Local Admins Page -->
+            <div id="LocalAdmins" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
             <div class="w3-container w3-padding-32 w3-center w3-black">
                 <h1>Local Admins</h1>
             </div>  
-          </div>
+            </div>
 
-          <!-- Tivoli Page -->
-          <div id="Tivoli" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
+            <!-- Tivoli Page -->
+            <div id="Tivoli" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
             <div class="w3-container w3-padding-32 w3-center w3-black">
                 <h1>Tivoli</h1>
             </div>  
-          </div>
+            </div>
 
-          <!-- Sharepoint Page -->
-          <div id="Sharepoint" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
+            <!-- Sharepoint Page -->
+            <div id="Sharepoint" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
             <div class="w3-container w3-padding-32 w3-center w3-black">
                 <h1>SQL Sharepoint</h1>
             </div>  
-          </div>
-
+            </div>
 
         <!-- END PAGE CONTENT -->
         </div>
 
     </body>
+    
 </html>
