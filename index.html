@@ -8,7 +8,125 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"                                              >
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"                                    >
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"    >
-   
+  
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+
+            google.charts.load('current', {packages: ['corechart', 'line']});
+            google.charts.setOnLoadCallback(MemChart);
+
+            function MemChart() {
+
+                  var data = new google.visualization.DataTable();
+                  data.addColumn('string', 'Date');
+                  data.addColumn('number', 'Usage');
+
+                  data.addRows([
+                      ['09/05 00:00', 2300],
+                      ['09/05 02:00', 2300],
+                      ['09/05 04:00', 2300],
+                      ['09/05 06:00', 4530],
+                      ['09/05 08:00', 2945],
+                      ['09/05 10:00', 8900],
+                      ['09/05 12:00', 8800],
+                      ['09/05 14:00', 8475],
+                      ['09/05 16:00', 8475],
+                      ['09/05 18:00', 2372],
+                      ['09/05 20:00', 2333],
+                      ['09/05 22:00', 4533],
+                      
+                      ['10/05 00:00', 2222],
+                      ['10/05 02:00', 2432],
+                      ['10/05 04:00', 1897],
+                      ['10/05 06:00', 2131],
+                      ['10/05 08:00', 4567],
+                      ['10/05 10:00', 4532],
+                      ['10/05 12:00', 4664],
+                      ['10/05 14:00', 5354],
+                      ['10/05 16:00', 5432],
+                      ['10/05 18:00', 2422],
+                      ['10/05 20:00', 4432],
+                      ['10/05 22:00', 4567],
+                      
+                      ['11/05 00:00', 1111],
+                      ['11/05 02:00', 1111],
+                      ['11/05 04:00', 1111],
+                      ['11/05 06:00', 1111],
+                      ['11/05 08:00', 2342],
+                      ['11/05 10:00', 6645],
+                      ['11/05 12:00', 4454],
+                      ['11/05 14:00', 8900],
+                      ['11/05 16:00', 1111],
+                      ['11/05 18:00', 2233],
+                      ['11/05 20:00', 3435],
+                      ['11/05 22:00', 2122],
+                      
+                      ['12/05 00:00', 1111],
+                      ['12/05 02:00', 1213],
+                      ['12/05 04:00', 10000],
+                      ['12/05 06:00', 7857],
+                      ['12/05 08:00', 8978],
+                      ['12/05 10:00', 11000],
+                      ['12/05 12:00', 3422],
+                      ['12/05 14:00', 1342],
+                      ['12/05 16:00', 1211],
+                      ['12/05 18:00', 1111],
+                      ['12/05 20:00', 857],
+                      ['12/05 22:00', 654],
+                      
+                      ['13/05 00:00', 121],
+                      ['13/05 02:00', 9000],
+                      ['13/05 04:00', 2342],
+                      ['13/05 06:00', 1331],
+                      ['13/05 08:00', 1333],
+                      ['13/05 10:00', 3333],
+                      ['13/05 12:00', 3333],
+                      ['13/05 14:00', 3333],
+                      ['13/05 16:00', 3333],
+                      ['13/05 18:00', 5654],
+                      ['13/05 20:00', 111],
+                      ['13/05 22:00', 2222],
+                      
+                      ['14/05 00:00', 5565],
+                      ['14/05 02:00', 3232],
+                      ['14/05 04:00', 2244],
+                      ['14/05 06:00', 7575],
+                      ['14/05 08:00', 3555],
+                      ['14/05 10:00', 5353],
+                      ['14/05 12:00', 2222],
+                      ['14/05 14:00', 2222],
+                      ['14/05 16:00', 2222],
+                      ['14/05 18:00', 2222],
+                      ['14/05 20:00', 2222],
+                      ['14/05 22:00', 1111],
+                      
+                      ['15/05 00:00', 1111],
+                      ['15/05 02:00', 6754],
+                      ['15/05 04:00', 5643],
+                      ['15/05 06:00', 5654],
+                      ['15/05 08:00', 11232],
+                      ['15/05 10:00', 11111],
+                      ['15/05 12:00', 4675],
+                      ['15/05 14:00', 111],
+                      ['15/05 16:00', 1323],
+                      ['15/05 18:00', 3232],
+                      ['15/05 20:00', 2222],
+                      ['15/05 22:00', 2222]
+                  ]);
+
+                  var options = {
+                    hAxis:  {title: 'Date/Time'},
+                    vAxis:  {title: 'Usage (MBs)'},
+                    title: 'VM Memory Usage Over The Past 7 Days',
+                    width:  1200,
+                    height: 700
+                  };
+
+                  var chart = new google.visualization.LineChart(document.getElementById('MemGraph'));
+
+                  chart.draw(data, options);
+            }
+        </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         
@@ -1441,14 +1559,16 @@
             <!-- VM HARDWARE ACCORDION -->
               <div class="panel-group w5-content" id="accordion" style="color: black; font-display: block;">
                 <div class="panel panel-default">
-
-                  <!-- VM HARDWARE PANEL HEADING -->
-                  <div class="panel-heading" id="panel-heading-snow">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#VMHW_Cobllapse"><b>VM Hardware</b></a>
-                    </h4>
-                  </div>
-
+            
+                  <!--
+                        <!-- VM HARDWARE PANEL HEADING 
+                        <div class="panel-heading" id="panel-heading-snow">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#VMHW_Cobllapse"><b>VM Hardware</b></a>
+                            </h4>
+                        </div>
+                   -->
+                    
                   <!-- VM HARDWARE DATA COLLAPSE -->
                   <div id="VMHW_Collapse" class="panel-collapse collapse in">
                     <table border="1" style="overflow-x: auto" align="center">
@@ -1460,13 +1580,13 @@
                             <th style="width: 50%;">
 
                                 <!-- VM Info ACCORDIONA -->
-                                <div class="panel-group w5-content" id="VMCPU_Accordion" style="color: black; font-display: block; width:100%">
+                                <div class="panel-group w5-content" id="VMInfo_Accordion" style="color: black; font-display: block; width:100%">
                                     <div class="panel panel-default">
 
                                         <!-- VM Info PANEL HEADING -->
                                         <div class="panel-heading" id="panel-heading-VMCPU">
                                             <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#VMCPU_Accordion" href="#VMCPU_Collapse" onclick="ArrowRotate('CPU_Arrow')">
+                                                <a data-toggle="collapse" data-parent="#VMInfo_Accordion" href="#VMInfo_Collapse" onclick="ArrowRotate('CPU_Arrow')">
                                                     <i id="CPU_Arrow" class="fa fa-angle-right"></i><b> Virtual Machine Information</b>
 
                                                 </a>
@@ -1474,7 +1594,7 @@
                                         </div>
 
                                         <!-- VM Info DATA COLLAPSE -->
-                                        <div id="VMCPU_Collapse" class="panel-collapse collapse in">
+                                        <div id="VMInfo_Collapse" class="panel-collapse collapse">
                                             <table style="overflow-x: auto" align="center">
                                                 <col width="50%">
                                                 <col width="50%">
@@ -1537,13 +1657,13 @@
                             <!-- Host Info Table Sector -->
                             <th style="width: 50%;">
                                 <!-- Host INFO ACCORDIONA -->
-                                <div class="panel-group w5-content" id="VMHDD_Accordion" style="color: black; font-display: block; width:100%">
+                                <div class="panel-group w5-content" id="HostInfo_Accordion" style="color: black; font-display: block; width:100%">
                                     <div class="panel panel-default">
 
                                         <!-- Host INFO PANEL HEADING -->
                                         <div class="panel-heading" id="panel-heading-VMCPU">
                                             <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#VMCPU_Accordion" href="#VMHDD_Collapse" onclick="ArrowRotate('CPU_Arrow')">
+                                                <a data-toggle="collapse" data-parent="#HostInfo_Accordion" href="#HostInfo_Collapse" onclick="ArrowRotate('CPU_Arrow')">
                                                     <i id="CPU_Arrow" class="fa fa-angle-right"></i><b> Host Information </b>
 
                                                 </a>
@@ -1551,7 +1671,7 @@
                                         </div>
 
                                         <!-- Host INFO DATA COLLAPSE -->
-                                        <div id="VMHDD_Collapse" class="panel-collapse collapse in">
+                                        <div id="HostInfo_Collapse" class="panel-collapse collapse">
                                             <table style="overflow-x: auto" align="center">
                                                 <col width="20%">
                                                 <col width="20%">
@@ -1658,7 +1778,7 @@
                                         </div>
 
                                         <!-- CPU INFO DATA COLLAPSE -->
-                                        <div id="VMCPU_Collapse" class="panel-collapse collapse in">
+                                        <div id="VMCPU_Collapse" class="panel-collapse collapse">
                                             <table style="overflow-x: auto" align="center">
                                                 <col width="30%">
                                                 <col width="70%">
@@ -1699,7 +1819,7 @@
                                         </div>
 
                                         <!-- CPU INFO DATA COLLAPSE -->
-                                        <div id="VMHDD_Collapse" class="panel-collapse collapse in">
+                                        <div id="VMHDD_Collapse" class="panel-collapse collapse">
                                             <table style="overflow-x: auto" align="center">
                                                 <col width="25%">
                                                 <col width="25%">
@@ -1879,7 +1999,7 @@
             <!-- Local Admins Page -->
             <div id="LocalAdmins" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
             <div class="w3-container w3-padding-32 w3-center w3-black">
-                <h1>Local Admins</h1>
+                       <div id="MemGraph"></div>
             </div>  
             </div>
 
