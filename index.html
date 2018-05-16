@@ -11,125 +11,138 @@
   
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script type="text/javascript">
-
             google.charts.load('current', {packages: ['corechart', 'line']});
             google.charts.setOnLoadCallback(MemChart);
 
-            function MemChart() {
-
+            function MemChart() 
+            {
                   var data = new google.visualization.DataTable();
-                  data.addColumn('string', 'Date');
+                  data.addColumn('datetime', 'Date');
                   data.addColumn('number', 'Usage');
 
                   data.addRows([
-                      ['09/05 00:00', 2300],
-                      ['09/05 02:00', 2300],
-                      ['09/05 04:00', 2300],
-                      ['09/05 06:00', 4530],
-                      ['09/05 08:00', 2945],
-                      ['09/05 10:00', 8900],
-                      ['09/05 12:00', 8800],
-                      ['09/05 14:00', 8475],
-                      ['09/05 16:00', 8475],
-                      ['09/05 18:00', 2372],
-                      ['09/05 20:00', 2333],
-                      ['09/05 22:00', 4533],
+                      [new Date(2018,5,9,0), 2300],
+                      [new Date(2018,5,9,2), 2300],
+                      [new Date(2018,5,9,4), 2300],
+                      [new Date(2018,5,9,6), 4530],
+                      [new Date(2018,5,9,8), 2945],
+                      [new Date(2018,5,9,10), 8900],
+                      [new Date(2018,5,9,12), 8800],
+                      [new Date(2018,5,9,14), 8475],
+                      [new Date(2018,5,9,16), 8475],
+                      [new Date(2018,5,9,18), 2372],
+                      [new Date(2018,5,9,20), 2333],
+                      [new Date(2018,5,9,22), 4533],
+                     
+                      [new Date(2018,5,10,0), 1000],
+                      [new Date(2018,5,10,2), 1000],
+                      [new Date(2018,5,10,4), 1000],
+                      [new Date(2018,5,10,6), 1000],
+                      [new Date(2018,5,10,8), 1000],
+                      [new Date(2018,5,10,10), 1000],
+                      [new Date(2018,5,10,12), 1000],
+                      [new Date(2018,5,10,14), 2300],
+                      [new Date(2018,5,10,16), 4500],
+                      [new Date(2018,5,10,18), 6200],
+                      [new Date(2018,5,10,20), 8400],
+                      [new Date(2018,5,10,22), 10000],
+                    
+                      [new Date(2018,5,11,0), 2300],
+                      [new Date(2018,5,11,2), 3420],
+                      [new Date(2018,5,11,4), 2300],
+                      [new Date(2018,5,11,6), 4530],
+                      [new Date(2018,5,11,8), 2945],
+                      [new Date(2018,5,11,10), 8900],
+                      [new Date(2018,5,11,12), 8800],
+                      [new Date(2018,5,11,14), 8475],
+                      [new Date(2018,5,11,16), 8475],
+                      [new Date(2018,5,11,18), 2372],
+                      [new Date(2018,5,11,20), 2333],
+                      [new Date(2018,5,11,22), 4533],
                       
-                      ['10/05 00:00', 2222],
-                      ['10/05 02:00', 2432],
-                      ['10/05 04:00', 1897],
-                      ['10/05 06:00', 2131],
-                      ['10/05 08:00', 4567],
-                      ['10/05 10:00', 4532],
-                      ['10/05 12:00', 4664],
-                      ['10/05 14:00', 5354],
-                      ['10/05 16:00', 5432],
-                      ['10/05 18:00', 2422],
-                      ['10/05 20:00', 4432],
-                      ['10/05 22:00', 4567],
+                      [new Date(2018,5,12,0), 6754],
+                      [new Date(2018,5,12,2), 1232],
+                      [new Date(2018,5,12,4), 2300],
+                      [new Date(2018,5,12,6), 8754],
+                      [new Date(2018,5,12,8), 4444],
+                      [new Date(2018,5,12,10), 4444],
+                      [new Date(2018,5,12,12), 111],
+                      [new Date(2018,5,12,14), 1342],
+                      [new Date(2018,5,12,16), 222],
+                      [new Date(2018,5,12,18), 9000],
+                      [new Date(2018,5,12,20), 2345],
+                      [new Date(2018,5,12,22), 3333],
                       
-                      ['11/05 00:00', 1111],
-                      ['11/05 02:00', 1111],
-                      ['11/05 04:00', 1111],
-                      ['11/05 06:00', 1111],
-                      ['11/05 08:00', 2342],
-                      ['11/05 10:00', 6645],
-                      ['11/05 12:00', 4454],
-                      ['11/05 14:00', 8900],
-                      ['11/05 16:00', 1111],
-                      ['11/05 18:00', 2233],
-                      ['11/05 20:00', 3435],
-                      ['11/05 22:00', 2122],
+                      [new Date(2018,5,13,0), 3333],
+                      [new Date(2018,5,13,2), 12000],
+                      [new Date(2018,5,13,4), 8000],
+                      [new Date(2018,5,13,6), 8000],
+                      [new Date(2018,5,13,8), 10000],
+                      [new Date(2018,5,13,10), 2321],
+                      [new Date(2018,5,13,12), 3453],
+                      [new Date(2018,5,13,14), 2323],
+                      [new Date(2018,5,13,16), 1111],
+                      [new Date(2018,5,13,18), 1111],
+                      [new Date(2018,5,13,20), 8756],
+                      [new Date(2018,5,13,22), 4654],
                       
-                      ['12/05 00:00', 1111],
-                      ['12/05 02:00', 1213],
-                      ['12/05 04:00', 10000],
-                      ['12/05 06:00', 7857],
-                      ['12/05 08:00', 8978],
-                      ['12/05 10:00', 11000],
-                      ['12/05 12:00', 3422],
-                      ['12/05 14:00', 1342],
-                      ['12/05 16:00', 1211],
-                      ['12/05 18:00', 1111],
-                      ['12/05 20:00', 857],
-                      ['12/05 22:00', 654],
+                      [new Date(2018,5,14,0), 111],
+                      [new Date(2018,5,14,2), 534],
+                      [new Date(2018,5,14,4), 3333],
+                      [new Date(2018,5,14,6), 323],
+                      [new Date(2018,5,14,8), 9364],
+                      [new Date(2018,5,14,10), 3453],
+                      [new Date(2018,5,14,12), 7654],
+                      [new Date(2018,5,14,14), 3444],
+                      [new Date(2018,5,14,16), 3344],
+                      [new Date(2018,5,14,18), 8665],
+                      [new Date(2018,5,14,20), 1234],
+                      [new Date(2018,5,14,22), 1234],
                       
-                      ['13/05 00:00', 121],
-                      ['13/05 02:00', 9000],
-                      ['13/05 04:00', 2342],
-                      ['13/05 06:00', 1331],
-                      ['13/05 08:00', 1333],
-                      ['13/05 10:00', 3333],
-                      ['13/05 12:00', 3333],
-                      ['13/05 14:00', 3333],
-                      ['13/05 16:00', 3333],
-                      ['13/05 18:00', 5654],
-                      ['13/05 20:00', 111],
-                      ['13/05 22:00', 2222],
-                      
-                      ['14/05 00:00', 5565],
-                      ['14/05 02:00', 3232],
-                      ['14/05 04:00', 2244],
-                      ['14/05 06:00', 7575],
-                      ['14/05 08:00', 3555],
-                      ['14/05 10:00', 5353],
-                      ['14/05 12:00', 2222],
-                      ['14/05 14:00', 2222],
-                      ['14/05 16:00', 2222],
-                      ['14/05 18:00', 2222],
-                      ['14/05 20:00', 2222],
-                      ['14/05 22:00', 1111],
-                      
-                      ['15/05 00:00', 1111],
-                      ['15/05 02:00', 6754],
-                      ['15/05 04:00', 5643],
-                      ['15/05 06:00', 5654],
-                      ['15/05 08:00', 11232],
-                      ['15/05 10:00', 11111],
-                      ['15/05 12:00', 4675],
-                      ['15/05 14:00', 111],
-                      ['15/05 16:00', 1323],
-                      ['15/05 18:00', 3232],
-                      ['15/05 20:00', 2222],
-                      ['15/05 22:00', 2222]
+                      [new Date(2018,5,15,0), 2300],
+                      [new Date(2018,5,15,2), 2300],
+                      [new Date(2018,5,15,4), 2300],
+                      [new Date(2018,5,15,6), 4530],
+                      [new Date(2018,5,15,8), 2945],
+                      [new Date(2018,5,15,10), 8900],
+                      [new Date(2018,5,15,12), 8800],
+                      [new Date(2018,5,15,14), 8475],
+                      [new Date(2018,5,15,16), 8475],
+                      [new Date(2018,5,15,18), 2372],
+                      [new Date(2018,5,15,20), 2333],
+                      [new Date(2018,5,15,22), 4533]
                   ]);
 
                   var options = {
-                    hAxis:  {title: 'Date/Time'},
-                    vAxis:  {title: 'Usage (MBs)'},
-                    title: 'VM Memory Usage Over The Past 7 Days',
-                    width:  1200,
-                    height: 700
+                     
+                     hAxis:  {
+                         title: 'Date/Time'  , 
+                         gridlines: { count: 7 },
+                         format: 'dd/MM'
+                     },
+                      
+                     vAxis:  {
+                         title: 'Usage (MBs)', 
+                         gridlines: { count: 8 }
+                     },
+                     
+                     title: 'VM Memory Usage Over The Past 7 Days',
+                     legend: {position: 'none'}
                   };
-
+                
                   var chart = new google.visualization.LineChart(document.getElementById('MemGraph'));
-
                   chart.draw(data, options);
+                
+                  var chart = new google.visualization.LineChart(document.getElementById('CPUGraph'));
+                  chart.draw(data, options);
+                
+                  var chart = new google.visualization.LineChart(document.getElementById('HDDGraph'));
+                  chart.draw(data, options);
+                
             }
         </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        
         <script language="javascript">
             $(document).ready(
                 function()
@@ -527,7 +540,7 @@
                    </div>
 
                   <!-- ServiceNow Collapse -->
-                  <div id="collapse1" class="panel-collapse collapse in">
+                  <div id="collapse1" class="panel-collapse collapse">
                     <div  class="panel-body">
                         <!-- Top SNOW CMDB Tbl -->
                         <table align="center" width="100%" style="overflow-x: auto">
@@ -672,7 +685,7 @@
                   </div>
 
                   <!-- Prometheus DropDown -->
-                <div id="collapse2" class="panel-collapse collapse in">
+                <div id="collapse2" class="panel-collapse collapse">
                     <div  class="panel-body">
                         <!-- Top SNOW CMDB Tbl -->
                         <table align="center" width="100%" style="overflow-x: auto">
@@ -821,7 +834,7 @@
                   </div>
 
                   <!-- GEL DropDown -->
-                    <div id="collapse3" class="panel-collapse collapse in">
+                    <div id="collapse3" class="panel-collapse collapse">
                     <div  class="panel-body">
                         <!-- Top GEL CMDB Tbl -->
                         <table align="center" width="100%" style="overflow-x: auto">
@@ -934,7 +947,7 @@
                 </div>
 
                   <!-- ServiceNow Collapse -->
-                  <div id="SQLInstanceCollapse" class="panel-collapse collapse in">
+                  <div id="SQLInstanceCollapse" class="panel-collapse collapse">
                     <div  class="panel-body">
                         <div class="instance_info">
                             <p><b>Instance Information</b></p>
@@ -1170,17 +1183,17 @@
                     </div>
                   </div>
                   <!-- ServiceNow End -->
-                </div>
+               
 
                 <div class="panel panel-default">
-                  <div class="panel-heading" id="panel-heading-instance">
+                  <div class="panel-heading" id="panel-heading-instance2">
                     <h4 class="panel-title">
                         <a data-toggle="collapse" data-parent="#accordion" href="#SQLInstanceCollapse2"><b>PMGBVSQL02</b></a>
                     </h4>
                   </div>
                 </div>
 
-                <div id="SQLInstanceCollapse2" class="panel-collapse collapse in">
+                <div id="SQLInstanceCollapse2" class="panel-collapse collapse">
                     <div  class="panel-body">
                         <div class="instance_info">
                             <p><b>Instance Information</b></p>
@@ -1416,6 +1429,7 @@
                     </div>
                   </div>
               </div> 
+                </div>
             <!-- Accordion End -->
 
             </div>
@@ -1864,8 +1878,126 @@
                             </th>
 
                         </tr>
-
+                
                     </table>
+                
+                    <table border="1" style="overflow-x: auto" align="center">
+                      
+                        <!-- Performance Metrics Row -->
+                        <tr style="border: none; border-color: white; vertical-align: top">
+                        
+                            <!-- Performance Metrics Sector -->
+                            <th style="width: 100%;">
+                                
+                                <!-- Performance Metrics Accordion -->
+                                <div class="panel-group w5-content" id="PerfMon_Accordion" style="color: black; font-display: block; width:100%">
+                                    <div class="panel panel-default">
+
+                                        <!-- Performance Metrics PANEL HEADING -->
+                                        <div class="panel-heading" id="panel-heading-PerfMon">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#PerfMon_Accordion" href="#PerfMon_Collapse" onclick="ArrowRotate('PerfMon_Arrow')">
+                                                    <i id="CPU_Arrow" class="fa fa-angle-right"></i><b> Performance Metrics</b>
+                                                </a>
+                                            </h4>
+                                        </div>
+
+                                        <div id='PerfMon_Collapse' class="panel-collapse collapse">
+                                        
+                                            <!-- MEMORY METRICS ACCORDION -------------------------------------------------------->
+                                            <table style="overflow-x: auto" align="center">
+                                                <tr style="border: none; border-color: white; vertical-align: top">
+                                                    <th>
+                                                        
+                                                        <div class="panel-group w5-content" id="MemMetrics_Accordion" style="color: black; font-display: block; width:100%">
+                                                            <div class="panel panel-default">
+
+                                                                <!-- Performance Metrics PANEL HEADING -->
+                                                                <div class="panel-heading" id="panel-heading-MemMetrics">
+                                                                    <h4 class="panel-title">
+                                                                        <a data-toggle="collapse" data-parent="#MemMetrics_Accordion" href="#MemMetrics_Collapse" onclick="ArrowRotate('MemMetrics_Arrow')">
+                                                                            <i id="MemMetrics_Arrow" class="fa fa-angle-right"></i><b> Memory</b>
+                                                                        </a>
+                                                                    </h4>
+                                                                </div>
+
+                                                                <div id='MemMetrics_Collapse' class="panel-collapse collapse">
+                                                                    <div id='MemGraph'></div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </th>
+                                                </tr>
+                                            </table>
+                                        
+                                            <!-- CPU METRICS ACCORDION -------------------------------------------------------->
+                                             <table style="overflow-x: auto" align="center">
+                                                <tr style="border: none; border-color: white; vertical-align: top">
+                                                    <th>
+                                                        
+                                                        <div class="panel-group w5-content" id="CPUMetrics_Accordion" style="color: black; font-display: block; width:100%">
+                                                            <div class="panel panel-default">
+
+                                                                <!-- Performance Metrics PANEL HEADING -->
+                                                                <div class="panel-heading" id="panel-heading-CPUMetrics">
+                                                                    <h4 class="panel-title">
+                                                                        <a data-toggle="collapse" data-parent="#CPUMetrics_Accordion" href="#CPUMetrics_Collapse" onclick="ArrowRotate('CPUMetrics_Arrow')">
+                                                                            <i id="CPUMetrics_Arrow" class="fa fa-angle-right"></i><b> CPU</b>
+                                                                        </a>
+                                                                    </h4>
+                                                                </div>
+
+                                                                <div id='CPUMetrics_Collapse' class="panel-collapse collapse">
+                                                                    <div id='CPUGraph'></div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </th>
+                                                </tr>
+                                            </table>
+                                            
+                                            <!-- HDD METRICS ACCORDION -------------------------------------------------------->
+                                            <table style="overflow-x: auto" align="center">
+                                                <tr style="border: none; border-color: white; vertical-align: top">
+                                                    <th>
+                                                        
+                                                        <div class="panel-group w5-content" id="HDDMetrics_Accordion" style="color: black; font-display: block; width:100%">
+                                                            <div class="panel panel-default">
+
+                                                                <!-- Performance Metrics PANEL HEADING -->
+                                                                <div class="panel-heading" id="panel-heading-HDDMetrics">
+                                                                    <h4 class="panel-title">
+                                                                        <a data-toggle="collapse" data-parent="#HDDMetrics_Accordion" href="#HDDMetrics_Collapse" onclick="ArrowRotate('HDDMetrics_Arrow')">
+                                                                            <i id="HDDMetrics_Arrow" class="fa fa-angle-right"></i><b> HDD</b>
+                                                                        </a>
+                                                                    </h4>
+                                                                </div>
+
+                                                                <div id='HDDMetrics_Collapse' class="panel-collapse collapse">
+                                                                    <div id='HDDGraph'></div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </th>
+                                                </tr>
+                                            </table>
+                                            
+                                            <!--------------------------------------------------------------------------------->
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </th>
+                            
+                        </tr>
+ 
+                    </table>  
                   </div>
 
 
@@ -1999,7 +2131,7 @@
             <!-- Local Admins Page -->
             <div id="LocalAdmins" class="w3-justify w3-text-grey w3-padding-30" style="margin: auto; max-width: 90%;">
             <div class="w3-container w3-padding-32 w3-center w3-black">
-                       <div id="MemGraph"></div>
+                       
             </div>  
             </div>
 
